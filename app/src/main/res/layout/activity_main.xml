@@ -3,12 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <import type="android.view.View"/>
-        <variable
-            name="vm"
-            type="com.acemirr.training_task_1.ui.activities.MainViewModel" />
-    </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -35,9 +29,8 @@
             android:layout_height="match_parent"
             android:name="androidx.navigation.fragment.NavHostFragment"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            app:navGraph="@navigation/app_navigation"
-            app:defaultNavHost="true"
-            tools:layout="@layout/fragment_list"/>
+            app:navGraph="@navigation/navigation"
+            app:defaultNavHost="true"/>
 
         <!-- bottom menu -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -46,9 +39,9 @@
             android:layout_height="wrap_content"
             android:background="?android:colorBackground"
             android:layout_gravity="bottom"
-            app:layout_behavior="com.dot.baseandroid.utils.BottomNavigationViewBehavior"
+            app:layout_behavior=".utils.BottomNavViewBehavior"
             app:labelVisibilityMode="labeled"
-            app:menu="@menu/menu_main"/>
+            app:menu="@menu/main_menu"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

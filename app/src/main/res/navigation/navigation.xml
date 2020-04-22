@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listFragment">
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.acemirr.training_task_1.ui.list.ListFragment"
+        android:label="List Place"
+        tools:layout="@layout/list_fragment">
+        <action
+            android:id="@+id/action_to_detail_fragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.acemirr.training_task_1.ui.detail.DetailFragment"
+        android:label="detail_fragment"
+        tools:layout="@layout/detail_fragment" >
+        <argument
+            android:name="data_list_detail"
+            app:argType="com.acemirr.training_task_1.data.model.PlaceList" />
+    </fragment>
+    <fragment
+        android:id="@+id/gridFragment"
+        android:name="com.acemirr.training_task_1.ui.grid.GridFragment"
+        android:label="Grid Place"
+        tools:layout="@layout/grid_fragment" />
+    <fragment
+        android:id="@+id/pagingFragment"
+        android:name="com.acemirr.training_task_1.ui.paging.PagingFragment"
+        android:label="Paging Data"
+        tools:layout="@layout/paging_fragment" />
+</navigation>
