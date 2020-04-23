@@ -23,6 +23,7 @@
 
             <com.acemirr.training_task_1.utils.GridRecyclerView
                 android:id="@+id/rvGrid"
+                android:layoutAnimation="@anim/grid_rv_layoutanimation"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:listitem="@layout/item_list"/>

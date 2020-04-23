@@ -41,7 +41,7 @@ class ListFragment : Fragment() {
         setupRecyclerView()
         observeData()
 
-//        viewModel.getList(context!!)
+        viewModel.getList(context!!)
 
     }
     fun String.toIMGAssetPath() = "file:///android_asset/images/$this"
@@ -65,11 +65,11 @@ class ListFragment : Fragment() {
     }
 
     private fun observeData() {
-        adapter.replaceData(dummy)
-//        viewModel.liveDataList.observe(viewLifecycleOwner, Observer {
-//            adapter.replaceData(it)
-//            Log.e("LOG",it.toString())
-//        })
+//        adapter.replaceData(dummy)
+        viewModel.liveDataList.observe(viewLifecycleOwner, Observer {
+            adapter.replaceData(it)
+            Log.e("LOG",it.toString())
+        })
     }
 
 

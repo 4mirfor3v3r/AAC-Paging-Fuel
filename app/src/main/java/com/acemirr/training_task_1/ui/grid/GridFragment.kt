@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -16,6 +17,7 @@ import com.acemirr.training_task_1.R
 import com.acemirr.training_task_1.data.model.GridModel
 import com.acemirr.training_task_1.databinding.GridFragmentBinding
 import com.acemirr.training_task_1.ui.adapter.GridRVAdapter
+import kotlinx.android.synthetic.main.grid_fragment.*
 
 class GridFragment : Fragment() {
 
@@ -39,7 +41,8 @@ class GridFragment : Fragment() {
         setupRecyclerView()
         observeData()
 
-//        viewModel.getList(context!!)
+        if (rvGrid.layoutAnimation.isDone)
+            viewModel.getListGallery(context!!)
 
     }
     fun String.toIMGAssetPath() = "file:///android_asset/images/$this"
@@ -63,11 +66,10 @@ class GridFragment : Fragment() {
     }
 
     private fun observeData() {
-        adapter.replaceData(dummy)
-//        viewModel.liveDataList.observe(viewLifecycleOwner, Observer {
-//            adapter.replaceData(it)
-//            Log.e("LOG",it.toString())
-//        })
+//        adapter.replaceData(dummy)
+        viewModel.liveDataListGallery.observe(viewLifecycleOwner, Observer {
+            adapter.replaceData(it)
+        })
     }
 
 

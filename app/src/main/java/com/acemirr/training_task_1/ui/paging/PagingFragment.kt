@@ -75,6 +75,7 @@ class PagingFragment : Fragment() {
         val intent = Intent(context, PagingDetailActivity::class.java)
         intent.putExtra(PagingDetailActivity.EXTRA_DATA_NOTIFICATION, notificationModel)
         startActivity(intent)
+        activity?.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left)
     }
 
 }
