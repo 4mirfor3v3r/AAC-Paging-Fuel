@@ -7,7 +7,7 @@
         <import type="android.view.View" />
         <variable
             name="data"
-            type="com.acemirr.training_task_1.data.model.PlaceList" />
+            type="com.acemirr.training_task_1.data.model.ListModel" />
     </data>
 
     <androidx.cardview.widget.CardView

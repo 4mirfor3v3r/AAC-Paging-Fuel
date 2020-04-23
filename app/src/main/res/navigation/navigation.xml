@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.acemirr.training_task_1.ui.detailList.DetailFragment"
+        android:name="com.acemirr.training_task_1.ui.detailList.DetailListFragment"
         android:label="detail_fragment"
         tools:layout="@layout/detail_fragment" >
         <argument
             android:name="data_list_detail"
-            app:argType="com.acemirr.training_task_1.data.model.PlaceList" />
+            app:argType="com.acemirr.training_task_1.data.model.ListModel" />
     </fragment>
     <fragment
         android:id="@+id/gridFragment"

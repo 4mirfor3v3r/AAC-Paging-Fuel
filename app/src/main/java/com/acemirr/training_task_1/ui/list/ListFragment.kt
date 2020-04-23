@@ -1,7 +1,6 @@
 package com.acemirr.training_task_1.ui.list
 
 import android.content.res.Configuration
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -15,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.acemirr.training_task_1.R
-import com.acemirr.training_task_1.data.model.PlaceList
+import com.acemirr.training_task_1.data.model.ListModel
 import com.acemirr.training_task_1.databinding.ListFragmentBinding
 import com.acemirr.training_task_1.ui.adapter.ListRVAdapter
 
@@ -46,17 +45,17 @@ class ListFragment : Fragment() {
     }
     fun String.toIMGAssetPath() = "file:///android_asset/images/$this"
 //    val dummy = mutableListOf(
-//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath())
+//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath())
 //    )
 
     override fun onConfigurationChanged(newConfig: Configuration) {
@@ -66,7 +65,7 @@ class ListFragment : Fragment() {
 
     private fun observeData() {
 //        adapter.replaceData(dummy)
-        viewModel.liveDataList.observe(viewLifecycleOwner, Observer {
+        viewModel.liveDataListModel.observe(viewLifecycleOwner, Observer {
             adapter.replaceData(it)
             Log.e("LOG",it.toString())
         })
@@ -90,9 +89,9 @@ class ListFragment : Fragment() {
         binding.rvList.adapter = adapter
     }
 
-    private fun onItemClick(placeModel: PlaceList) {
-        val action = ListFragmentDirections.actionToDetailFragment(placeModel)
-        action.dataListDetail = placeModel
+    private fun onItemClick(modelModel: ListModel) {
+        val action = ListFragmentDirections.actionToDetailFragment(modelModel)
+        action.dataListDetail = modelModel
         findNavController().navigate(action)
     }
 }

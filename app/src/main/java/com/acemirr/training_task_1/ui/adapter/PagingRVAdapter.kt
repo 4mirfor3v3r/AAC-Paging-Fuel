@@ -13,7 +13,7 @@ import com.acemirr.training_task_1.utils.AdapterCallback
 import com.acemirr.training_task_1.utils.LoadingState
 import java.lang.IndexOutOfBoundsException
 
-class PagingRVAdapter(val onClick: (PagingModel) -> Unit): PagedListAdapter<PagingModel, RecyclerView.ViewHolder>(AdapterCallback.DiffNotificationCallback) {
+class PagingRVAdapter(val onClick: (PagingModel) -> Unit): PagedListAdapter<PagingModel, RecyclerView.ViewHolder>(AdapterCallback.DiffPagingCallback) {
 
     companion object {
         const val VIEW_TYPE_ITEM = 1
@@ -35,13 +35,13 @@ class PagingRVAdapter(val onClick: (PagingModel) -> Unit): PagedListAdapter<Pagi
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        if (viewType == VIEW_TYPE_ITEM) {
+        return if (viewType == VIEW_TYPE_ITEM) {
             val binding: ItemPagingBinding =
                 DataBindingUtil.inflate(inflater, R.layout.item_paging, parent, false)
-            return PagingHolder(binding)
+            PagingHolder(binding)
         } else {
             val x = inflater.inflate(R.layout.item_load_more,parent,false)
-            return LoadMoreHolder(x)
+            LoadMoreHolder(x)
         }
     }
 

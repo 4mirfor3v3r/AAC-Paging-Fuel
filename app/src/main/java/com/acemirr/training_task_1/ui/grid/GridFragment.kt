@@ -41,9 +41,14 @@ class GridFragment : Fragment() {
         setupRecyclerView()
         observeData()
 
-        if (rvGrid.layoutAnimation.isDone)
+        if (binding.rvGrid.layoutAnimation.isDone)
             viewModel.getListGallery(context!!)
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.rvGrid.startLayoutAnimation()
     }
     fun String.toIMGAssetPath() = "file:///android_asset/images/$this"
 //    val dummy = mutableListOf(

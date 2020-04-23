@@ -1,21 +1,18 @@
 package com.acemirr.training_task_1.ui.detailGrid
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
-
 import com.acemirr.training_task_1.R
 import com.acemirr.training_task_1.data.model.GridModel
 import com.acemirr.training_task_1.databinding.DetailGridFragmentBinding
 import com.acemirr.training_task_1.ui.MainActivity
 import com.acemirr.training_task_1.ui.base.CustomGridDetailViewModelFactory
-import com.acemirr.training_task_1.ui.detailList.DetailFragmentArgs
 
 class DetailGridFragment: Fragment() {
 

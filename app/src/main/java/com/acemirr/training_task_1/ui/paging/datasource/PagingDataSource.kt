@@ -11,29 +11,29 @@ import com.acemirr.training_task_1.utils.logDebug
 class PagingDataSource: PageKeyedDataSource<Int, PagingModel>() {
 
     var state: MutableLiveData<LoadingState> = MutableLiveData()
-    var listNotification: MutableList<PagingModel> = mutableListOf()
+    var listPaging: MutableList<PagingModel> = mutableListOf()
 
     override fun loadInitial(params: LoadInitialParams<Int>, callback: LoadInitialCallback<Int, PagingModel>) {
-        logDebug("NotificationDataSource # loadInitial ${params.requestedLoadSize}")
+        logDebug("PagingDataSource # loadInitial ${params.requestedLoadSize}")
         updateState(LoadingState.LOADING)
-        listNotification.clear()
+        listPaging.clear()
         for (i:Int in 1..20) {
-            listNotification.add(PagingModel(i, "Paging # $i"))
+            listPaging.add(PagingModel(i, "Paging # $i"))
         }
         updateState(LoadingState.DONE)
-        callback.onResult(listNotification, 0, 20)
+        callback.onResult(listPaging, 0, 20)
     }
 
     override fun loadAfter(params: LoadParams<Int>, callback: LoadCallback<Int, PagingModel>) {
-        logDebug("NotificationDataSource # loadAfter ${params.key}/${params.requestedLoadSize}")
+        logDebug("PagingDataSource # loadAfter ${params.key}/${params.requestedLoadSize}")
         updateState(LoadingState.LOADING)
-        listNotification.clear()
+        listPaging.clear()
         for (i:Int in 1..20) {
-            listNotification.add(PagingModel(i, "Loadmore # $i"))
+            listPaging.add(PagingModel(i, "Loadmore # $i"))
         }
         SystemClock.sleep(Constants.DUMMY_LOAD_MORE_TIME)
         updateState(LoadingState.DONE)
-        callback.onResult(listNotification, params.key+20)
+        callback.onResult(listPaging, params.key+20)
     }
 
     override fun loadBefore(params: LoadParams<Int>, callback: LoadCallback<Int, PagingModel>) {

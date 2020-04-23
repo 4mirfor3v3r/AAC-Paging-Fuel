@@ -6,7 +6,7 @@
         <import type="android.view.View" />
         <variable
             name="vm"
-            type="com.acemirr.training_task_1.ui.detailList.DetailViewModel" />
+            type="com.acemirr.training_task_1.ui.detailList.DetailListViewModel" />
     </data>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:background="@android:color/white"

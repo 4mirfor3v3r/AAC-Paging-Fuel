@@ -8,7 +8,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Keep
 @Parcelize
-data class PlaceList(
+data class ListModel(
     @SerializedName("nama") @Expose val name: String,
     @SerializedName("lokasi") @Expose val location: String,
     @SerializedName("deskripsi") @Expose val description: String,

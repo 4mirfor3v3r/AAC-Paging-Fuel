@@ -14,7 +14,7 @@ import com.acemirr.training_task_1.utils.LoadingState
 class PagingViewModel(application: Application) : AndroidViewModel(application) {
 
     private var pagingDataSourceFactory: PagingDataSourceFactory = PagingDataSourceFactory()
-    var notificationList: LiveData<PagedList<PagingModel>>
+    var pagingList: LiveData<PagedList<PagingModel>>
 
     init {
         val config = PagedList.Config.Builder()
@@ -23,7 +23,7 @@ class PagingViewModel(application: Application) : AndroidViewModel(application) 
             .setInitialLoadSizeHint(20)
             .setEnablePlaceholders(false)
             .build()
-        notificationList = LivePagedListBuilder(pagingDataSourceFactory, config).build()
+        pagingList = LivePagedListBuilder(pagingDataSourceFactory, config).build()
     }
 
     fun getLoadingState(): LiveData<LoadingState> {

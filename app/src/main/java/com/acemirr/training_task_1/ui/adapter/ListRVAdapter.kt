@@ -5,14 +5,14 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.acemirr.training_task_1.R
-import com.acemirr.training_task_1.data.model.PlaceList
+import com.acemirr.training_task_1.data.model.ListModel
 import com.acemirr.training_task_1.databinding.ItemListBinding
 
-class ListRVAdapter(val onClick:(PlaceList) -> Unit):RecyclerView.Adapter<ListRVAdapter.Holder>() {
-    private val data = ArrayList<PlaceList>()
-    class Holder(val itemListBinding: ItemListBinding):RecyclerView.ViewHolder(itemListBinding.root) {
-        fun bindView(placeList: PlaceList) {
-            itemListBinding.data = placeList
+class ListRVAdapter(val onClick:(ListModel) -> Unit):RecyclerView.Adapter<ListRVAdapter.Holder>() {
+    private val data = ArrayList<ListModel>()
+    class Holder(private val itemListBinding: ItemListBinding):RecyclerView.ViewHolder(itemListBinding.root) {
+        fun bindView(listModel: ListModel) {
+            itemListBinding.data = listModel
 
             itemListBinding.executePendingBindings()
         }
@@ -29,16 +29,16 @@ class ListRVAdapter(val onClick:(PlaceList) -> Unit):RecyclerView.Adapter<ListRV
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        val placeList = data[position]
-        holder.bindView(placeList)
+        val listModel = data[position]
+        holder.bindView(listModel)
         holder.itemView.setOnClickListener {
-            onClick(placeList)
+            onClick(listModel)
         }
     }
 
-    fun replaceData(list: Collection<PlaceList>){
+    fun replaceData(listModel: Collection<ListModel>){
         data.clear()
-        data.addAll(list)
+        data.addAll(listModel)
         notifyDataSetChanged()
     }
 }

@@ -2,7 +2,6 @@ package com.acemirr.training_task_1.ui.paging
 
 import android.content.Intent
 import android.content.res.Configuration
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -63,7 +62,7 @@ class PagingFragment : Fragment() {
     }
 
     private fun observeLiveData() {
-        viewModel.notificationList.observe(viewLifecycleOwner, Observer {
+        viewModel.pagingList.observe(viewLifecycleOwner, Observer {
             adapter.submitList(it)
         })
         viewModel.getLoadingState().observe(viewLifecycleOwner, Observer {
@@ -71,9 +70,9 @@ class PagingFragment : Fragment() {
         })
     }
 
-    private fun onItemClicked(notificationModel: PagingModel) {
+    private fun onItemClicked(pagingModel: PagingModel) {
         val intent = Intent(context, PagingDetailActivity::class.java)
-        intent.putExtra(PagingDetailActivity.EXTRA_DATA_NOTIFICATION, notificationModel)
+        intent.putExtra(PagingDetailActivity.EXTRA_DATA_NOTIFICATION, pagingModel)
         startActivity(intent)
         activity?.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left)
     }

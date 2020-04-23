@@ -10,7 +10,7 @@ class AdapterCallback {
         /**
          * diff callback adapter notification
          */
-        val DiffNotificationCallback = object : DiffUtil.ItemCallback<PagingModel>() {
+        val DiffPagingCallback = object : DiffUtil.ItemCallback<PagingModel>() {
             override fun areItemsTheSame(oldItem: PagingModel, newItem: PagingModel): Boolean {
                 return oldItem.message == newItem.message
             }
