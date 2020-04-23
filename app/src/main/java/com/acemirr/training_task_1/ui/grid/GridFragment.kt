@@ -46,19 +46,19 @@ class GridFragment : Fragment() {
 
     }
     fun String.toIMGAssetPath() = "file:///android_asset/images/$this"
-    val dummy = mutableListOf(
-        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath())
-    )
+//    val dummy = mutableListOf(
+//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath())
+//    )
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)

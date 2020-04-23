@@ -45,19 +45,19 @@ class ListFragment : Fragment() {
 
     }
     fun String.toIMGAssetPath() = "file:///android_asset/images/$this"
-    val dummy = mutableListOf(
-        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath())
-    )
+//    val dummy = mutableListOf(
+//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
+//        PlaceList("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath())
+//    )
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
