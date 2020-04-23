@@ -13,6 +13,7 @@ class ListRVAdapter(val onClick:(PlaceList) -> Unit):RecyclerView.Adapter<ListRV
     class Holder(val itemListBinding: ItemListBinding):RecyclerView.ViewHolder(itemListBinding.root) {
         fun bindView(placeList: PlaceList) {
             itemListBinding.data = placeList
+
             itemListBinding.executePendingBindings()
         }
 
@@ -30,10 +31,14 @@ class ListRVAdapter(val onClick:(PlaceList) -> Unit):RecyclerView.Adapter<ListRV
     override fun onBindViewHolder(holder: Holder, position: Int) {
         val placeList = data[position]
         holder.bindView(placeList)
+        holder.itemView.setOnClickListener {
+            onClick(placeList)
+        }
     }
 
     fun replaceData(list: Collection<PlaceList>){
         data.clear()
         data.addAll(list)
+        notifyDataSetChanged()
     }
 }

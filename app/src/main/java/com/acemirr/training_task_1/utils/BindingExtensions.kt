@@ -11,7 +11,8 @@ object BindingExtensions {
         get() = Picasso.get()
 
     private fun ImageView.load(path:String, request:(RequestCreator) ->RequestCreator){
-        request(picasso.load(path)).into(this)
+        request(picasso.load(path))
+            .into(this)
     }
 
     @BindingAdapter("app:imageUrl")

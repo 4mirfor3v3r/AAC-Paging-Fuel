@@ -31,7 +31,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:imageUrl="@{data.image}"
+                app:imageUrl="@{data.thumbnail}"
                 app:srcCompat="@drawable/ic_launcher_background" />
 
             <TextView
@@ -42,7 +42,7 @@
                 android:layout_marginBottom="8dp"
                 android:text="@{data.name}"
                 android:textColor="@android:color/white"
-                android:textSize="18sp"
+                android:textSize="@dimen/_16ssp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/tvItemDescription"
                 app:layout_constraintStart_toStartOf="parent"
@@ -55,6 +55,8 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="@{data.description}"
+                android:textSize="@dimen/_12ssp"
+                android:maxLength="25"
                 android:textColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.acemirr.training_task_1.ui.detail.DetailFragment"
+        android:name="com.acemirr.training_task_1.ui.detailList.DetailFragment"
         android:label="detail_fragment"
         tools:layout="@layout/detail_fragment" >
         <argument
@@ -30,10 +30,27 @@
         android:id="@+id/gridFragment"
         android:name="com.acemirr.training_task_1.ui.grid.GridFragment"
         android:label="Grid Place"
-        tools:layout="@layout/grid_fragment" />
+        tools:layout="@layout/grid_fragment" >
+        <action
+            android:id="@+id/action_to_detail_grid_fragment"
+            app:destination="@id/detailGridFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
     <fragment
         android:id="@+id/pagingFragment"
         android:name="com.acemirr.training_task_1.ui.paging.PagingFragment"
         android:label="Paging Data"
         tools:layout="@layout/paging_fragment" />
+    <fragment
+        android:id="@+id/detailGridFragment"
+        android:name="com.acemirr.training_task_1.ui.detailGrid.DetailGridFragment"
+        android:label="detail_grid_fragment"
+        tools:layout="@layout/detail_grid_fragment" >
+        <argument
+            android:name="data_grid"
+            app:argType="com.acemirr.training_task_1.data.model.GridModel" />
+    </fragment>
 </navigation>
