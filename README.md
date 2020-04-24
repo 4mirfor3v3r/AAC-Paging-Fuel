@@ -3,12 +3,12 @@ App that using Android Arch Component, Fuel for Networking, Picasso for Image Ca
 
 ## Screenshots
 
-<p float="center">
+<p align="center">
   <img src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/1.jpg" />
   <img src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/2.jpg" /> 
   <img src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/3.jpg" />
 </p>
-<p float="center">
+<p align="center">
   <img src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/4.jpg" />
   <img src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/5.jpg" /> 
 </p>
