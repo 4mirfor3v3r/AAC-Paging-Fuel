@@ -2,6 +2,9 @@
 App that using Android Arch Component, Fuel for Networking, Picasso for Image Caching
 
 ## Screenshots
+
+![](https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/1.jpg)  |  ![](https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/2.jpg)
+
 ![](https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/1.jpg)  |  ![](https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/2.jpg) | ![](https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/3.jpg)
 ![](https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/4.jpg) | ![](https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/5.jpg)
 
