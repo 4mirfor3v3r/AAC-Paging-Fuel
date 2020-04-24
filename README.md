@@ -1,4 +1,5 @@
-# AAC-Paging-Fuel ![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/next-update-1.1.0-brightgreen.svg?style=flat)
+# AAC-Paging-Fuel 
+![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat) ![](https://img.shields.io/badge/next-update-1.1.0-brightgreen.svg?style=flat)
 App that using Android Arch Component, Fuel for Networking, Picasso for Image Caching
 
 ## Screenshots
