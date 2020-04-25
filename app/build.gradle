@@ -7,6 +7,7 @@ apply plugin: "androidx.navigation.safeargs"
 androidExtensions {
     experimental = true
 }
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -57,8 +58,14 @@ dependencies {
 //    network
     implementation "com.github.kittinunf.fuel:fuel:$fuelVersion"
     implementation "com.github.kittinunf.fuel:fuel-android:$fuelVersion"
+    implementation "com.github.kittinunf.fuel:fuel-coroutines:$fuelVersion"
     implementation "com.github.kittinunf.fuel:fuel-gson:$fuelVersion"
+    implementation "com.github.kittinunf.fuel:fuel-jackson:$fuelVersion"
     implementation "com.google.code.gson:gson:$gsonVersion"
+//    implementation "com.fasterxml.jackson.core:2.10.2"
+//    implementation "com.fasterxml.jackson-databind:2.10.2"
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.0'
+
 
 //    navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
@@ -81,4 +88,5 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$rvVersion"
     implementation "com.google.android.material:material:1.1.0"
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
 }

@@ -21,7 +21,9 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven{
+            url = uri("https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind")
+        }
     }
 }
 
