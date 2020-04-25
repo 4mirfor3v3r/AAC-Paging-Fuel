@@ -25,6 +25,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupNavigation() {
         val navController =Navigation.findNavController(this,R.id.fragmentContainer)
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when(destination.id){
+                R.id.detailGridFragment ->{
+                    binding.toolbarMain.visibility = View.GONE
+                }
+                else ->{
+                    binding.toolbarMain.visibility = View.VISIBLE
+                }
+            }
+        }
         setupActionBarWithNavController(navController)
         NavigationUI.setupWithNavController(binding.bottomNavigationViewMain,navController)
     }

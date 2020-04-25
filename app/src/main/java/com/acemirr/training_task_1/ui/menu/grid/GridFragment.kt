@@ -1,23 +1,20 @@
-package com.acemirr.training_task_1.ui.grid
+package com.acemirr.training_task_1.ui.menu.grid
 
 import android.content.res.Configuration
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-
 import com.acemirr.training_task_1.R
 import com.acemirr.training_task_1.data.model.GridModel
 import com.acemirr.training_task_1.databinding.GridFragmentBinding
 import com.acemirr.training_task_1.ui.adapter.GridRVAdapter
-import kotlinx.android.synthetic.main.grid_fragment.*
 
 class GridFragment : Fragment() {
 
@@ -50,20 +47,6 @@ class GridFragment : Fragment() {
         super.onResume()
         binding.rvGrid.startLayoutAnimation()
     }
-    fun String.toIMGAssetPath() = "file:///android_asset/images/$this"
-//    val dummy = mutableListOf(
-//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        GridModel("Title 1","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath())
-//    )
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
@@ -71,9 +54,9 @@ class GridFragment : Fragment() {
     }
 
     private fun observeData() {
-//        adapter.replaceData(dummy)
         viewModel.liveDataListGallery.observe(viewLifecycleOwner, Observer {
-            adapter.replaceData(it)
+            adapter.submitList(it)
+            binding.rvGrid.startLayoutAnimation()
         })
     }
 
@@ -88,16 +71,17 @@ class GridFragment : Fragment() {
         val layoutManager = GridLayoutManager(context,3)
         binding.rvGrid.layoutManager = layoutManager
 
-        adapter = GridRVAdapter {
-            onItemClick(it)
+        adapter = GridRVAdapter {gridModel, position ->
+            onItemClick(gridModel, position)
         }
 
         binding.rvGrid.adapter = adapter
     }
 
-    private fun onItemClick(gridModel: GridModel) {
-        val action = GridFragmentDirections.actionToDetailGridFragment(gridModel)
+    private fun onItemClick(gridModel: GridModel, position: Int) {
+        val action = GridFragmentDirections.actionToDetailGridFragment(gridModel,position)
         action.dataGrid = gridModel
+        action.position = position
         findNavController().navigate(action)
     }
 

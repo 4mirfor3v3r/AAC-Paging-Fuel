@@ -1,4 +1,4 @@
-package com.acemirr.training_task_1.ui.paging.datasource
+package com.acemirr.training_task_1.ui.menu.paging.datasource
 
 import android.os.SystemClock
 import androidx.lifecycle.MutableLiveData
@@ -11,7 +11,7 @@ import com.acemirr.training_task_1.utils.logDebug
 class PagingDataSource: PageKeyedDataSource<Int, PagingModel>() {
 
     var state: MutableLiveData<LoadingState> = MutableLiveData()
-    var listPaging: MutableList<PagingModel> = mutableListOf()
+    private var listPaging: MutableList<PagingModel> = mutableListOf()
 
     override fun loadInitial(params: LoadInitialParams<Int>, callback: LoadInitialCallback<Int, PagingModel>) {
         logDebug("PagingDataSource # loadInitial ${params.requestedLoadSize}")

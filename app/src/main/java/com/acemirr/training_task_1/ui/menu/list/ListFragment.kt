@@ -1,18 +1,16 @@
-package com.acemirr.training_task_1.ui.list
+package com.acemirr.training_task_1.ui.menu.list
 
 import android.content.res.Configuration
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-
 import com.acemirr.training_task_1.R
 import com.acemirr.training_task_1.data.model.ListModel
 import com.acemirr.training_task_1.databinding.ListFragmentBinding
@@ -43,20 +41,6 @@ class ListFragment : Fragment() {
         viewModel.getList(context!!)
 
     }
-    fun String.toIMGAssetPath() = "file:///android_asset/images/$this"
-//    val dummy = mutableListOf(
-//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath()),
-//        ListModel("Title 1","Indonesia","DEscription","rendang.jpg".toIMGAssetPath(),"rendang.jpg".toIMGAssetPath())
-//    )
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
@@ -64,10 +48,8 @@ class ListFragment : Fragment() {
     }
 
     private fun observeData() {
-//        adapter.replaceData(dummy)
         viewModel.liveDataListModel.observe(viewLifecycleOwner, Observer {
-            adapter.replaceData(it)
-            Log.e("LOG",it.toString())
+            adapter.submitList(it)
         })
     }
 

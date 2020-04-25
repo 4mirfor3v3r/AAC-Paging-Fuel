@@ -1,4 +1,4 @@
-package com.acemirr.training_task_1.utils
+package com.acemirr.training_task_1.widget
 
 import android.content.Context
 import android.util.AttributeSet
@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.view.animation.GridLayoutAnimationController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import java.lang.ClassCastException
 
 class GridRecyclerView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : RecyclerView(context, attrs, defStyleAttr) {
     override fun setLayoutManager(layout: LayoutManager?) {

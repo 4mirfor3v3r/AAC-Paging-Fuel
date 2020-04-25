@@ -4,12 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.ListAdapter
 import com.acemirr.training_task_1.R
 import com.acemirr.training_task_1.data.model.ListModel
 import com.acemirr.training_task_1.databinding.ItemListBinding
+import com.acemirr.training_task_1.utils.AdapterCallback
 
-class ListRVAdapter(val onClick:(ListModel) -> Unit):RecyclerView.Adapter<ListRVAdapter.Holder>() {
-    private val data = ArrayList<ListModel>()
+class ListRVAdapter(val onClick:(ListModel) -> Unit):ListAdapter<ListModel,ListRVAdapter.Holder>(AdapterCallback.DiffListCallback) {
     class Holder(private val itemListBinding: ItemListBinding):RecyclerView.ViewHolder(itemListBinding.root) {
         fun bindView(listModel: ListModel) {
             itemListBinding.data = listModel
@@ -24,21 +25,12 @@ class ListRVAdapter(val onClick:(ListModel) -> Unit):RecyclerView.Adapter<ListRV
         return Holder(binding)
     }
 
-    override fun getItemCount(): Int {
-        return data.size
-    }
-
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        val listModel = data[position]
+        val listModel = getItem(holder.adapterPosition)
         holder.bindView(listModel)
         holder.itemView.setOnClickListener {
             onClick(listModel)
         }
     }
 
-    fun replaceData(listModel: Collection<ListModel>){
-        data.clear()
-        data.addAll(listModel)
-        notifyDataSetChanged()
-    }
 }

@@ -1,4 +1,4 @@
-package com.acemirr.training_task_1.ui.paging
+package com.acemirr.training_task_1.ui.menu.paging
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -7,8 +7,8 @@ import androidx.lifecycle.Transformations
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import com.acemirr.training_task_1.data.model.PagingModel
-import com.acemirr.training_task_1.ui.paging.datasource.PagingDataSource
-import com.acemirr.training_task_1.ui.paging.datasource.PagingDataSourceFactory
+import com.acemirr.training_task_1.ui.menu.paging.datasource.PagingDataSource
+import com.acemirr.training_task_1.ui.menu.paging.datasource.PagingDataSourceFactory
 import com.acemirr.training_task_1.utils.LoadingState
 
 class PagingViewModel(application: Application) : AndroidViewModel(application) {

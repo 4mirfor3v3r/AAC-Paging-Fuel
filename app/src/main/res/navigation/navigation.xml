@@ -6,7 +6,7 @@
     app:startDestination="@id/listFragment">
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.acemirr.training_task_1.ui.list.ListFragment"
+        android:name="com.acemirr.training_task_1.ui.menu.list.ListFragment"
         android:label="List Place"
         tools:layout="@layout/list_fragment">
         <action
@@ -19,18 +19,18 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.acemirr.training_task_1.ui.detailList.DetailListFragment"
-        android:label="detail_fragment"
-        tools:layout="@layout/detail_fragment" >
+        android:name="com.acemirr.training_task_1.ui.menu.listDetail.DetailListFragment"
+        android:label="Detail Item"
+        tools:layout="@layout/detail_fragment">
         <argument
             android:name="data_list_detail"
             app:argType="com.acemirr.training_task_1.data.model.ListModel" />
     </fragment>
     <fragment
         android:id="@+id/gridFragment"
-        android:name="com.acemirr.training_task_1.ui.grid.GridFragment"
-        android:label="Grid Place"
-        tools:layout="@layout/grid_fragment" >
+        android:name="com.acemirr.training_task_1.ui.menu.grid.GridFragment"
+        android:label="Gallery"
+        tools:layout="@layout/grid_fragment">
         <action
             android:id="@+id/action_to_detail_grid_fragment"
             app:destination="@id/detailGridFragment"
@@ -41,16 +41,19 @@
     </fragment>
     <fragment
         android:id="@+id/pagingFragment"
-        android:name="com.acemirr.training_task_1.ui.paging.PagingFragment"
+        android:name="com.acemirr.training_task_1.ui.menu.paging.PagingFragment"
         android:label="Paging Data"
         tools:layout="@layout/paging_fragment" />
     <fragment
         android:id="@+id/detailGridFragment"
-        android:name="com.acemirr.training_task_1.ui.detailGrid.DetailGridFragment"
-        android:label="detail_grid_fragment"
-        tools:layout="@layout/detail_grid_fragment" >
+        android:name="com.acemirr.training_task_1.ui.menu.gridDetail.DetailGridFragment"
+        android:label="Detail Item"
+        tools:layout="@layout/detail_grid_fragment">
         <argument
             android:name="data_grid"
             app:argType="com.acemirr.training_task_1.data.model.GridModel" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
     </fragment>
 </navigation>

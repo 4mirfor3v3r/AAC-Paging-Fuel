@@ -1,8 +1,19 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:1.0.0'
+    }
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'com.getkeepsafe.dexcount'
 
 androidExtensions {
     experimental = true
@@ -16,10 +27,11 @@ android {
         applicationId "com.acemirr.training_task_1"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        setProperty("archivesBaseName",applicationId+"-v"+versionCode+"("+versionName+")")
     }
 
     buildTypes {
@@ -27,9 +39,34 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        release{
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
     dataBinding {
         enabled = true
+    }
+    sourceSets{
+        main{
+            res.srcDirs =[
+                    'src/main/res',
+                    'src/main/res-menu/',
+                    'src/main/res-menu/grid',
+                    'src/main/res-menu/list',
+                    'src/main/res-menu/paging',
+            ]
+        }
+    }
+    flavorDimensions "default"
+    productFlavors {
+        //sample for product flavor
+        development {
+            buildConfigField "String", "BASE_URL", "\"https://info-malang-batu.firebaseapp.com/\""
+        }
+        production {
+            buildConfigField "String", "BASE_URL", "\"https://info-malang-batu.firebaseapp.com/\""
+        }
     }
     compileOptions {
         sourceCompatibility = 1.8
@@ -49,8 +86,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -86,7 +122,7 @@ dependencies {
 
 //    other
     implementation "androidx.recyclerview:recyclerview:$rvVersion"
-    implementation "com.google.android.material:material:1.1.0"
-    implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
+    implementation "com.flaviofaria:kenburnsview:$kenBurnsVersion"
 }

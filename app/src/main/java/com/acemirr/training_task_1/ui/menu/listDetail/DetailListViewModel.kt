@@ -1,4 +1,4 @@
-package com.acemirr.training_task_1.ui.detailList
+package com.acemirr.training_task_1.ui.menu.listDetail
 
 import android.app.Application
 import androidx.databinding.ObservableField

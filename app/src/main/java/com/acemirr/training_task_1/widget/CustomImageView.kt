@@ -1,4 +1,4 @@
-package com.acemirr.training_task_1.utils
+package com.acemirr.training_task_1.widget
 
 import android.content.Context
 import android.util.AttributeSet

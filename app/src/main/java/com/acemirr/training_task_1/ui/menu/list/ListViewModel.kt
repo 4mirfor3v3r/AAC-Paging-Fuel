@@ -1,4 +1,4 @@
-package com.acemirr.training_task_1.ui.list
+package com.acemirr.training_task_1.ui.menu.list
 
 import android.app.Application
 import android.content.Context

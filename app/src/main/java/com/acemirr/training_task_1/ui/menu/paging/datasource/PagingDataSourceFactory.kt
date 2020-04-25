@@ -1,4 +1,4 @@
-package com.acemirr.training_task_1.ui.paging.datasource
+package com.acemirr.training_task_1.ui.menu.paging.datasource
 
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource

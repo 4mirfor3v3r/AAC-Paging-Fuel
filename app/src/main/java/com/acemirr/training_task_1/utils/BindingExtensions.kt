@@ -21,7 +21,7 @@ object BindingExtensions {
         }
     }
 
-    @BindingAdapter("app:imageUrl")
+    @BindingAdapter("imageUrl")
     @JvmStatic
     fun loadImage(view: ImageView, url:String?){
         if (url!=null){
