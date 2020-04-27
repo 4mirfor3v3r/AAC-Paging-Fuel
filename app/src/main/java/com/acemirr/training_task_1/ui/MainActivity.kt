@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when(destination.id){
                 R.id.detailGridFragment ->{
-                    binding.toolbarMain.visibility = View.GONE
+                    binding.appBarMain.setExpanded(true)
+                    supportActionBar?.hide()
                 }
                 else ->{
                     binding.toolbarMain.visibility = View.VISIBLE

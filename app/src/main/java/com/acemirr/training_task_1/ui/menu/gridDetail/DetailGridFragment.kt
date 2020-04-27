@@ -17,7 +17,7 @@ import com.acemirr.training_task_1.databinding.DetailGridFragmentBinding
 import com.acemirr.training_task_1.ui.MainActivity
 import com.acemirr.training_task_1.ui.adapter.GridDetailRVAdapter
 import com.acemirr.training_task_1.ui.base.CustomGridDetailViewModelFactory
-import com.acemirr.training_task_1.utils.CenterZoomLayout
+import com.acemirr.training_task_1.utils.CenterZoomLayoutManager
 
 class DetailGridFragment: Fragment() {
 
@@ -53,7 +53,7 @@ class DetailGridFragment: Fragment() {
     }
 
     private fun setupRecyclerView() {
-        val layoutManager = CenterZoomLayout(context!!)
+        val layoutManager = CenterZoomLayoutManager(context!!)
         layoutManager.orientation = LinearLayoutManager.HORIZONTAL
         layoutManager.reverseLayout = false
         layoutManager.stackFromEnd = false
@@ -62,7 +62,6 @@ class DetailGridFragment: Fragment() {
         val snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(binding.rvGridDetail)
         binding.rvGridDetail.isNestedScrollingEnabled = false
-
         binding.rvGridDetail.adapter = adapter
     }
 

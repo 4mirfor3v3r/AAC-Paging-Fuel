@@ -11,48 +11,114 @@
     <androidx.cardview.widget.CardView
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/_10sdp"
-        android:foregroundGravity="center"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:elevation="4dp"
         app:cardCornerRadius="12dp"
-        app:cardElevation="5dp">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:gravity="center"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
+
 
             <com.flaviofaria.kenburnsview.KenBurnsView
-                android:id="@+id/item_image"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:imageUrl="@{data.image}"
-                tools:src="@tools:sample/backgrounds/scenic"
+                android:id="@+id/tour_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:scaleType="centerCrop"
-                />
+                imageUrl="@{data.image}"
+                tools:src="@tools:sample/backgrounds/scenic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <View
-                android:id="@+id/trans_view"
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@android:color/transparent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
             <TextView
                 android:id="@+id/item_title"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_6sdp"
-                android:layout_marginEnd="@dimen/_6sdp"
-                android:layout_marginBottom="@dimen/_6sdp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
                 android:text="@{data.caption}"
-                tools:text="@tools:sample/lorem"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/_16ssp"
-                android:textStyle="bold" />
-        </RelativeLayout>
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.cardview.widget.CardView>
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
+<!--        <View-->
+<!--            android:id="@+id/trans_view"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginStart="@dimen/_10sdp"-->
+<!--        android:layout_marginEnd="@dimen/_10sdp"-->
+<!--        android:layout_marginTop="@dimen/_28sdp"-->
+<!--        android:layout_marginBottom="@dimen/_28sdp"-->
+<!--        app:cardCornerRadius="12dp"-->
+<!--        app:cardElevation="5dp">-->
+
+<!--        -->
+<!--        <RelativeLayout-->
+<!--            android:gravity="center"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" >-->
+
+<!--            <com.flaviofaria.kenburnsview.KenBurnsView-->
+<!--                android:id="@+id/item_image"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                app:imageUrl="@{data.image}"-->
+<!--                tools:src="@tools:sample/backgrounds/scenic"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                />-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/item_title"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/_6sdp"-->
+<!--                android:layout_marginEnd="@dimen/_6sdp"-->
+<!--                android:layout_marginBottom="@dimen/_6sdp"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_alignParentLeft="true"-->
+<!--                android:text="@{data.caption}"-->
+<!--                tools:text="@tools:sample/lorem"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="@dimen/_16ssp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </RelativeLayout>-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+<!--    </RelativeLayout>-->
 </layout>
