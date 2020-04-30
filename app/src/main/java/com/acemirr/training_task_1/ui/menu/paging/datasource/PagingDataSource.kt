@@ -1,46 +1,48 @@
 package com.acemirr.training_task_1.ui.menu.paging.datasource
 
-import android.os.SystemClock
+import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.PageKeyedDataSource
-import com.acemirr.training_task_1.data.model.PagingModel
-import com.acemirr.training_task_1.utils.Constants
+import com.acemirr.training_task_1.data.model.News
+import com.acemirr.training_task_1.data.repository.PagingRepo
 import com.acemirr.training_task_1.utils.LoadingState
-import com.acemirr.training_task_1.utils.logDebug
+import kotlinx.coroutines.cancel
 
-class PagingDataSource: PageKeyedDataSource<Int, PagingModel>() {
+class PagingDataSource(private val ctx: Context, private val pagingRepo: PagingRepo) :PageKeyedDataSource<Int,News>() {
 
     var state: MutableLiveData<LoadingState> = MutableLiveData()
-    private var listPaging: MutableList<PagingModel> = mutableListOf()
 
-    override fun loadInitial(params: LoadInitialParams<Int>, callback: LoadInitialCallback<Int, PagingModel>) {
-        logDebug("PagingDataSource # loadInitial ${params.requestedLoadSize}")
+    override fun loadInitial(params: LoadInitialParams<Int>, callback: LoadInitialCallback<Int, News>) {
         updateState(LoadingState.LOADING)
-        listPaging.clear()
-        for (i:Int in 1..20) {
-            listPaging.add(PagingModel(i, "Paging # $i"))
-        }
-        updateState(LoadingState.DONE)
-        callback.onResult(listPaging, 0, 20)
+        pagingRepo.getNewsPaging(ctx, listOf("page" to 1,"pageSize" to params.requestedLoadSize),{
+            if (it != null) {
+                callback.onResult(it.news,null,2)
+            }
+        },{
+            updateState(LoadingState.DONE)
+        })
     }
 
-    override fun loadAfter(params: LoadParams<Int>, callback: LoadCallback<Int, PagingModel>) {
-        logDebug("PagingDataSource # loadAfter ${params.key}/${params.requestedLoadSize}")
+    override fun loadAfter(params: LoadParams<Int>, callback: LoadCallback<Int, News>) {
         updateState(LoadingState.LOADING)
-        listPaging.clear()
-        for (i:Int in 1..20) {
-            listPaging.add(PagingModel(i, "Loadmore # $i"))
-        }
-        SystemClock.sleep(Constants.DUMMY_LOAD_MORE_TIME)
-        updateState(LoadingState.DONE)
-        callback.onResult(listPaging, params.key+20)
+        pagingRepo.getNewsPaging(ctx,listOf("page" to params.key,"pageSize" to params.requestedLoadSize),{
+            if (it != null){
+                callback.onResult(it.news,params.key + 1)
+            }
+        },{
+            updateState(LoadingState.DONE)
+        })
     }
 
-    override fun loadBefore(params: LoadParams<Int>, callback: LoadCallback<Int, PagingModel>) {
-
+    override fun loadBefore(params: LoadParams<Int>, callback: LoadCallback<Int, News>) {
     }
 
-    private fun updateState(state: LoadingState){
+    private fun updateState(state: LoadingState) {
         this.state.postValue(state)
+    }
+
+    override fun invalidate() {
+        pagingRepo.coroutineScope.cancel()
+        super.invalidate()
     }
 }

@@ -20,6 +20,14 @@ androidExtensions {
 }
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('D:\\Keystore\\com.amier.app.jks')
+            storePassword '20031015'
+            keyAlias = 'com.amier.app'
+            keyPassword '20031015'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
 
@@ -41,6 +49,7 @@ android {
         }
         release{
             minifyEnabled true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -96,11 +105,7 @@ dependencies {
     implementation "com.github.kittinunf.fuel:fuel-android:$fuelVersion"
     implementation "com.github.kittinunf.fuel:fuel-coroutines:$fuelVersion"
     implementation "com.github.kittinunf.fuel:fuel-gson:$fuelVersion"
-    implementation "com.github.kittinunf.fuel:fuel-jackson:$fuelVersion"
     implementation "com.google.code.gson:gson:$gsonVersion"
-//    implementation "com.fasterxml.jackson.core:2.10.2"
-//    implementation "com.fasterxml.jackson-databind:2.10.2"
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.0'
 
 
 //    navigation

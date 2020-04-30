@@ -12,7 +12,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.acemirr.training_task_1.R
-import com.acemirr.training_task_1.data.model.PagingModel
+import com.acemirr.training_task_1.data.model.News
+//import com.acemirr.training_task_1.data.model.PagingModel
 import com.acemirr.training_task_1.databinding.PagingFragmentBinding
 import com.acemirr.training_task_1.ui.PagingDetailActivity
 import com.acemirr.training_task_1.ui.adapter.PagingRVAdapter
@@ -34,7 +35,6 @@ class PagingFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(PagingViewModel(activity?.application!!)::class.java)
         binding.vm = viewModel
 
-        setupSwipeRefresh()
         setupRecyclerView()
         observeLiveData()
     }
@@ -42,12 +42,6 @@ class PagingFragment : Fragment() {
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         activity?.recreate()
-    }
-
-    private fun setupSwipeRefresh() {
-        binding.swipeRefreshListNotification.setOnRefreshListener {
-            viewModel.refreshListNotification()
-        }
     }
 
     private fun setupRecyclerView() {
@@ -69,7 +63,7 @@ class PagingFragment : Fragment() {
         })
     }
 
-    private fun onItemClicked(pagingModel: PagingModel) {
+    private fun onItemClicked(pagingModel: News) {
         val intent = Intent(context, PagingDetailActivity::class.java)
         intent.putExtra(PagingDetailActivity.EXTRA_DATA_NOTIFICATION, pagingModel)
         startActivity(intent)
