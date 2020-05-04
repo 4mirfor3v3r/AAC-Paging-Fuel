@@ -19,6 +19,7 @@ import com.acemirr.training_task_1.ui.activities.PagingDetailActivity
 import com.acemirr.training_task_1.ui.menu.paging.adapter.PagingRVAdapter
 import com.acemirr.training_task_1.ui.menu.paging.viewmodel.PagingViewModel
 import com.acemirr.training_task_1.utils.Constants.EXTRA_DATA_PAGING
+import kotlinx.android.synthetic.main.paging_fragment.*
 
 class PagingFragment : Fragment() {
 
@@ -63,6 +64,7 @@ class PagingFragment : Fragment() {
     private fun observeLiveData() {
         viewModel.pagingList.observe(viewLifecycleOwner, Observer {
             adapter.submitList(it)
+            binding.recyclerViewListNotification.startLayoutAnimation()
         })
         viewModel.getLoadingState().observe(viewLifecycleOwner, Observer {
 

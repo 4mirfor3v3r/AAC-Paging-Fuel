@@ -5,7 +5,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.acemirr.training_task_1.R
@@ -25,8 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupNavigation() {
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainer) as NavHostFragment
-        val navController =navHostFragment.navController
+        val navController =Navigation.findNavController(this,R.id.fragmentContainer)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when(destination.id){
                 R.id.detailGridFragment ->{

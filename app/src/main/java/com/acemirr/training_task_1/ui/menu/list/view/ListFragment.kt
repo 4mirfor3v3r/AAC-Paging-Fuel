@@ -16,6 +16,7 @@ import com.acemirr.training_task_1.ui.menu.list.model.ListModel
 import com.acemirr.training_task_1.databinding.ListFragmentBinding
 import com.acemirr.training_task_1.ui.menu.list.adapter.ListRVAdapter
 import com.acemirr.training_task_1.ui.menu.list.viewmodel.ListViewModel
+import kotlinx.android.synthetic.main.list_fragment.*
 
 class ListFragment : Fragment() {
 
@@ -51,6 +52,7 @@ class ListFragment : Fragment() {
     private fun observeData() {
         viewModel.liveDataListModel.observe(viewLifecycleOwner, Observer {
             adapter.submitList(it)
+            binding.rvList.startLayoutAnimation()
         })
     }
 
