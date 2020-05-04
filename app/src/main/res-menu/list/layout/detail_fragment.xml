@@ -6,7 +6,7 @@
         <import type="android.view.View" />
         <variable
             name="vm"
-            type="com.acemirr.training_task_1.ui.menu.listDetail.DetailListViewModel" />
+            type="com.acemirr.training_task_1.ui.menu.list.viewmodel.DetailListViewModel" />
     </data>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivDetail"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_340sdp"
@@ -47,7 +47,7 @@
                 android:id="@+id/tvTitle"
                 android:text="@{vm.name}"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_8sdp"
                 android:textSize="@dimen/_16ssp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"

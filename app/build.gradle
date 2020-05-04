@@ -23,13 +23,14 @@ android {
     signingConfigs {
         release {
             storeFile file('D:\\Keystore\\com.amier.app.jks')
-            storePassword '20031015'
-            keyAlias = 'com.amier.app'
-            keyPassword '20031015'
+            storeFile file('..\\app-keystore.jks')
+            storePassword 'worklearnplay'
+            keyAlias = 'com.acemirr.app'
+            keyPassword 'worklearnplay'
         }
     }
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.acemirr.training_task_1"
@@ -96,7 +97,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    testImplementation 'junit:junit:4.12'
+//    testing
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 

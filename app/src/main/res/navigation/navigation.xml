@@ -6,7 +6,7 @@
     app:startDestination="@id/listFragment">
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.acemirr.training_task_1.ui.menu.list.ListFragment"
+        android:name="com.acemirr.training_task_1.ui.menu.list.view.ListFragment"
         android:label="List Place"
         tools:layout="@layout/list_fragment">
         <action
@@ -19,16 +19,16 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.acemirr.training_task_1.ui.menu.listDetail.DetailListFragment"
+        android:name="com.acemirr.training_task_1.ui.menu.list.view.DetailListFragment"
         android:label="Detail Item"
         tools:layout="@layout/detail_fragment">
         <argument
             android:name="data_list_detail"
-            app:argType="com.acemirr.training_task_1.data.model.ListModel" />
+            app:argType="com.acemirr.training_task_1.ui.menu.list.model.ListModel" />
     </fragment>
     <fragment
         android:id="@+id/gridFragment"
-        android:name="com.acemirr.training_task_1.ui.menu.grid.GridFragment"
+        android:name="com.acemirr.training_task_1.ui.menu.grid.view.GridFragment"
         android:label="Gallery"
         tools:layout="@layout/grid_fragment">
         <action
@@ -41,17 +41,17 @@
     </fragment>
     <fragment
         android:id="@+id/pagingFragment"
-        android:name="com.acemirr.training_task_1.ui.menu.paging.PagingFragment"
+        android:name="com.acemirr.training_task_1.ui.menu.paging.view.PagingFragment"
         android:label="Paging Data"
         tools:layout="@layout/paging_fragment" />
     <fragment
         android:id="@+id/detailGridFragment"
-        android:name="com.acemirr.training_task_1.ui.menu.gridDetail.DetailGridFragment"
+        android:name="com.acemirr.training_task_1.ui.menu.grid.view.DetailGridFragment"
         android:label="Detail Item"
         tools:layout="@layout/detail_grid_fragment">
         <argument
             android:name="data_grid"
-            app:argType="com.acemirr.training_task_1.data.model.GridModel" />
+            app:argType="com.acemirr.training_task_1.ui.menu.grid.model.GridModel" />
         <argument
             android:name="position"
             app:argType="integer" />

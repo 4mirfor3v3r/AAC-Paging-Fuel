@@ -37,7 +37,6 @@ class Network(val coroutineScope: CoroutineScope) {
                 })
             } catch (throwable: Throwable) {
                 if (throwable is CancellationException) {
-                    // coroutines has canceled
                     logError("Network # Throwable ==> job canceled")
                 } else {
                     logError("Network # Throwable")

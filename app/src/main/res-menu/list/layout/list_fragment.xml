@@ -8,7 +8,7 @@
         <import type="android.view.View" />
         <variable
             name="vm"
-            type="com.acemirr.training_task_1.ui.menu.list.ListViewModel" />
+            type="com.acemirr.training_task_1.ui.menu.list.viewmodel.ListViewModel" />
     </data>
 
     <RelativeLayout

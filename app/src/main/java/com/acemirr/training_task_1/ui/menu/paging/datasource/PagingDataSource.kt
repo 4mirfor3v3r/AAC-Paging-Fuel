@@ -3,12 +3,12 @@ package com.acemirr.training_task_1.ui.menu.paging.datasource
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.PageKeyedDataSource
-import com.acemirr.training_task_1.data.model.News
 import com.acemirr.training_task_1.data.repository.PagingRepo
+import com.acemirr.training_task_1.ui.menu.paging.model.News
 import com.acemirr.training_task_1.utils.LoadingState
 import kotlinx.coroutines.cancel
 
-class PagingDataSource(private val ctx: Context, private val pagingRepo: PagingRepo) :PageKeyedDataSource<Int,News>() {
+class PagingDataSource(private val ctx: Context, private val pagingRepo: PagingRepo) :PageKeyedDataSource<Int, News>() {
 
     var state: MutableLiveData<LoadingState> = MutableLiveData()
 
@@ -42,7 +42,7 @@ class PagingDataSource(private val ctx: Context, private val pagingRepo: PagingR
     }
 
     override fun invalidate() {
-        pagingRepo.coroutineScope.cancel()
+        pagingRepo.scope.cancel()
         super.invalidate()
     }
 }

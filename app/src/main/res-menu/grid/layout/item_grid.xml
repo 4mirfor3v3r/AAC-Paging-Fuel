@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="data"
+            type="com.acemirr.training_task_1.ui.menu.grid.model.GridModel"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        android:layout_margin="@dimen/_4sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.acemirr.training_task_1.widget.CustomImageView
+            android:id="@+id/imageViewItemGallery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/backgrounds/scenic"
+            app:imageUrl="@{data.thumbnail}"/>
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

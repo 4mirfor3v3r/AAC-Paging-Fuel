@@ -5,7 +5,7 @@
         <import type="android.view.View" />
         <variable
             name="vm"
-            type="com.acemirr.training_task_1.ui.menu.gridDetail.DetailGridViewModel" />
+            type="com.acemirr.training_task_1.ui.menu.grid.viewmodel.DetailGridViewModel" />
     </data>
 
     <LinearLayout
@@ -17,7 +17,7 @@
             android:id="@+id/rvGridDetail"
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_marginBottom="@dimen/_10sdp"
             tools:listitem="@layout/item_grid_detail"/>
     </LinearLayout>
