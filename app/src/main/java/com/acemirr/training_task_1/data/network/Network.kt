@@ -13,7 +13,7 @@ import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-class Network(val coroutineScope: CoroutineScope) {
+class Network(val scope: CoroutineScope) {
 
     inline fun <reified T : Any> api(
         context: Context,
@@ -21,7 +21,7 @@ class Network(val coroutineScope: CoroutineScope) {
         noinline onSuccess: (T) -> Unit,
         noinline onFinally: (Boolean) -> Unit
     ) {
-        coroutineScope.launch {
+        scope.launch {
             try {
                 request.invoke().awaitObjectResult(object : ResponseDeserializable<T> {
                     override fun deserialize(response: Response): T {
