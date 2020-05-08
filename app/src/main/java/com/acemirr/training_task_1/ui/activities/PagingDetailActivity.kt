@@ -9,4 +9,9 @@ class PagingDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_paging_detail)
     }
+
+    override fun onBackPressed() {
+        overridePendingTransition(R.anim.slide_from_left,R.anim.slide_to_right)
+        super.onBackPressed()
+    }
 }

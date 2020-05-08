@@ -40,7 +40,7 @@ class ListFragment : Fragment() {
         setupRecyclerView()
         observeData()
 
-        viewModel.getList(context!!)
+        viewModel.getList(requireContext())
 
     }
 
@@ -59,7 +59,7 @@ class ListFragment : Fragment() {
 
     private fun setupSwipeRefresh() {
         binding.swipeRefreshList.setOnRefreshListener {
-            viewModel.getList(context!!)
+            viewModel.getList(requireContext())
         }
     }
 

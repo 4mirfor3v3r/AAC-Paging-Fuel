@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/listFragment"
         android:icon="@drawable/ic_format_list"
-        android:title="List"/>
+        android:title="@string/string_list"/>
 
     <item android:id="@+id/gridFragment"
         android:icon="@drawable/ic_grid"
-        android:title="Grid"/>
+        android:title="@string/string_grid"/>
 
     <item android:id="@+id/pagingFragment"
         android:icon="@drawable/ic_paging"
-        android:title="Paging"/>
+        android:title="@string/string_paging"/>
 </menu>

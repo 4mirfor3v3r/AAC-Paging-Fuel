@@ -42,9 +42,7 @@ class DetailGridFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity).hideNavigation(true)
         viewModel = ViewModelProvider(this,
-            CustomGridDetailViewModelFactory(
-                activity!!.application
-            )
+            CustomGridDetailViewModelFactory(requireActivity().application)
         ).get(
             DetailGridViewModel::class.java)
         binding.vm = viewModel
@@ -52,7 +50,7 @@ class DetailGridFragment: Fragment() {
         setupRecyclerView()
         observeData()
 
-        viewModel.getListGallery(context!!)
+        viewModel.getListGallery(requireContext())
     }
     override fun onDestroy() {
         super.onDestroy()
@@ -60,7 +58,7 @@ class DetailGridFragment: Fragment() {
     }
 
     private fun setupRecyclerView() {
-        val layoutManager = CenterZoomLayoutManager(context!!)
+        val layoutManager = CenterZoomLayoutManager(requireContext())
         layoutManager.orientation = LinearLayoutManager.HORIZONTAL
         layoutManager.reverseLayout = false
         layoutManager.stackFromEnd = false

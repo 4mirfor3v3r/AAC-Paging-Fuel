@@ -40,7 +40,7 @@ class GridFragment : Fragment() {
         observeData()
 
         if (binding.rvGrid.layoutAnimation.isDone)
-            viewModel.getListGallery(context!!)
+            viewModel.getListGallery(requireContext())
 
     }
 
@@ -64,7 +64,7 @@ class GridFragment : Fragment() {
 
     private fun setupSwipeRefresh() {
         binding.swipeRefreshGrid.setOnRefreshListener {
-            viewModel.getListGallery(context!!)
+            viewModel.getListGallery(requireContext())
         }
     }
 

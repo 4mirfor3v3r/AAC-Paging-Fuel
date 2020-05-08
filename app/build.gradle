@@ -21,7 +21,7 @@ androidExtensions {
 
 android {
     signingConfigs {
-        release {
+        config {
             storeFile file('..\\app-keystore.jks')
             storePassword 'worklearnplay'
             keyAlias = 'com.acemirr.app'
@@ -43,13 +43,14 @@ android {
     }
 
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         release{
             minifyEnabled true
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

@@ -32,7 +32,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:imageUrl="@{data.thumbnail}"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/ic_image_placeholder" />
 
             <TextView
                 android:id="@+id/tvItemTitle"
@@ -46,7 +46,7 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/tvItemDescription"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:text="Title" />
+                tools:text="@string/string_title" />
 
             <TextView
                 android:id="@+id/tvItemDescription"
@@ -60,7 +60,7 @@
                 android:textColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:text="Description" />
+                tools:text="@string/string_description" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

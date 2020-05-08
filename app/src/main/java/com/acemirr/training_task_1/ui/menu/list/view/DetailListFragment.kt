@@ -37,7 +37,7 @@ class DetailListFragment : Fragment() {
         listViewModel = ViewModelProvider(this,
             CustomListDetailViewModelFactory(
                 listModel!!,
-                activity!!.application
+                requireActivity().application
             )
         ).get(
             DetailListViewModel::class.java)
