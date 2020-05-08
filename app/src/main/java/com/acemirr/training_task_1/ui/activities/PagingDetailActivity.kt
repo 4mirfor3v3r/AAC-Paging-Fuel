@@ -11,7 +11,7 @@ class PagingDetailActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        overridePendingTransition(R.anim.slide_from_left,R.anim.slide_to_right)
         super.onBackPressed()
+        overridePendingTransition(R.anim.slide_from_left,R.anim.slide_to_right)
     }
 }
