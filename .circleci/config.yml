@@ -3,12 +3,18 @@ version: 2.1
 orbs:
  android: circleci/android@0.2.0
 
+language: java
+sudo: false
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
 jobs:
   build:
     working_directory: ~/Training_Task_1
     docker:
       - image: circleci/android:api-28
     environment:
+      CODECOV_TOKEN: "25ac4cf4-39e2-4b79-95bd-97528e01d98a"
       JVM_OPTS: -Xmx4g
     steps:
       - checkout
