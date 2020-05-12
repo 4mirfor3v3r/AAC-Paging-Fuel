@@ -12,7 +12,6 @@ jobs:
       GRADLE_OPTS: -Xmx4g -Dorg.gradle.daemon=false
       JVM_OPTS: -Xmx4g
     steps:
-      - checkout:
       - run:
           name: Run Lint
           command: ./gradlew lint
