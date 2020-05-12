@@ -13,8 +13,8 @@ jobs:
       JVM_OPTS: -Xmx4g
     steps:
       - run:
-          name: Run Lint
-          command: ./gradlew lint
-       - run:
-          name: Run Build
-          command: ./gradlew build
+        name: Run Lint
+        command: ./gradlew lint
+      - run:
+        name: Run Build
+        command: ./gradlew build
