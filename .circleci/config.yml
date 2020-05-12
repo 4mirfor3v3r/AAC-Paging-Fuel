@@ -5,9 +5,17 @@ orbs:
 
 jobs:
   build:
-    executor: android/android
-        
+    working_directory: ~/Training_Task_1
+    docker:
+      - image: circleci/android:api-28
+    environment:
+      GRADLE_OPTS: -Xmx4g -Dorg.gradle.daemon=false
+      JVM_OPTS: -Xmx4g
     steps:
       - checkout
       - run:
+          name: Run Lint
+          command: ./gradlew lint
+       - run:
+          name: Run Build
           command: ./gradlew build
