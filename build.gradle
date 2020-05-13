@@ -16,7 +16,7 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
-        classpath("com.hiya:jacoco-android:0.2")
+        classpath "org.jacoco:org.jacoco.core:0.8.4"
     }
 }
 
