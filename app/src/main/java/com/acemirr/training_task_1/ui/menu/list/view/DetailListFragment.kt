@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.acemirr.training_task_1.R
-import com.acemirr.training_task_1.ui.menu.list.model.ListModel
 import com.acemirr.training_task_1.databinding.DetailFragmentBinding
 import com.acemirr.training_task_1.ui.activities.MainActivity
+import com.acemirr.training_task_1.ui.menu.list.model.ListModel
 import com.acemirr.training_task_1.ui.menu.list.viewmodel.CustomListDetailViewModelFactory
 import com.acemirr.training_task_1.ui.menu.list.viewmodel.DetailListViewModel
 
@@ -46,7 +46,6 @@ class DetailListFragment : Fragment() {
         binding.vm = listViewModel
 
     }
-
     override fun onDestroy() {
         super.onDestroy()
         (activity as MainActivity).hideNavigation(false)

@@ -29,7 +29,8 @@ before_script:
   - adb devices
 
 script:
-  - ./gradlew build testDevelopmentDebug createDevelopmentDebugUnitTestCoverageReport assembleAndroidTest
+  - ./gradlew buildDevelopmentDebug buildDevelopmentRelease
+  - ./gradlew testDevelopmentDebug createDevelopmentDebugUnitTestCoverageReport assembleAndroidTest
   - ./gradlew connectedCheck
 
 after_success:

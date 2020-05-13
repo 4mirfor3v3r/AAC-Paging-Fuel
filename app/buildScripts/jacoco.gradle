@@ -6,10 +6,6 @@ jacoco {
     // reportsDir = file("$buildDir/customJacocoReportDir")
 }
 
-tasks.withType(Test) {
-    jacoco.includeNoLocationClasses = true
-}
-
 project.afterEvaluate {
 
     def buildTypes = android.buildTypes.collect { type -> type.name }
