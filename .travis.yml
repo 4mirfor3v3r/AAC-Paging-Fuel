@@ -1,12 +1,6 @@
 language: android
 dist: trusty
-
-env:
-  matrix:
-    - ANDROID_API_LEVEL=21 ANDROID_ABI=armeabi-v7a
-    - ANDROID_API_LEVEL=23 ANDROID_ABI=armeabi-v7a
-  global:
-    - ADB_INSTALL_TIMEOUT=5
+sudo: required
 
 android:
   components:
