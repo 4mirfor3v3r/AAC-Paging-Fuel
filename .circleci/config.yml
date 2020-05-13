@@ -13,7 +13,9 @@ jobs:
       - image: circleci/android:api-28
     environment:
       CODECOV_TOKEN: 25ac4cf4-39e2-4b79-95bd-97528e01d98a
-      JVM_OPTS: -Xmx5g
+      JVM_OPTS: -Xmx4g
+      GRADLE_OPTS:
+          - Dorg.gradle.daemon=false
     steps:
       - checkout
       - run:
