@@ -32,11 +32,5 @@ jobs:
           name: Run Coverage Report
           command: ./gradlew testDevelopmentDebug createDevelopmentDebugUnitTestCoverageReport
       - run:
-          name: Renaming folder and files of reports so codecov.io can find it One
-          command: mv app/build/reports/jacoco/createDevelopmentDebugUnitTestCoverageReport app/build/reports/jacoco/jacocoTestDevelopmentDebugUnitTestReport
-      - run:
-          name: Renaming folder and files of reports so codecov.io can find it TWO
-          command: mv app/build/reports/jacoco/jacocoTestDevelopmentDebugUnitTestReport/createDevelopmentDebugUnitTestCoverageReport.xml app/build/reports/jacoco/jacocoTestDevelopmentDebugUnitTestReport/jacocoTestDevelopmentDebugUnitTestReport.xml
-      - run:
           name: Run CodeCov
           command: bash <(curl -s https://codecov.io/bash) -t 25ac4cf4-39e2-4b79-95bd-97528e01d98a
