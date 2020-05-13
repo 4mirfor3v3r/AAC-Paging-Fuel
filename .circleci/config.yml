@@ -12,7 +12,6 @@ jobs:
     docker:
       - image: circleci/android:api-28
     environment:
-      CODECOV_TOKEN: 25ac4cf4-39e2-4b79-95bd-97528e01d98a
       JVM_OPTS: -Xmx4g
       GRADLE_OPTS: -Dorg.gradle.daemon=false
     steps:
@@ -40,4 +39,4 @@ jobs:
           command: mv app/build/reports/jacoco/jacocoTestDevelopmentDebugUnitTestReport/createDevelopmentDebugUnitTestCoverageReport.xml app/build/reports/jacoco/jacocoTestDevelopmentDebugUnitTestReport/jacocoTestDevelopmentDebugUnitTestReport.xml
       - run:
           name: Run CodeCov
-          command: bash <(curl -s https://codecov.io/bash)
+          command: bash <(curl -s https://codecov.io/bash) -t 25ac4cf4-39e2-4b79-95bd-97528e01d98a
