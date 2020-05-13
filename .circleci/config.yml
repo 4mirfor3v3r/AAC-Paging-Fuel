@@ -3,9 +3,6 @@ version: 2.1
 orbs:
  android: circleci/android@0.2.0
 
-language: java
-sudo: false
-
 jobs:
   build:
     working_directory: ~/Training_Task_1
@@ -13,7 +10,6 @@ jobs:
       - image: circleci/android:api-28
     environment:
       CODECOV_TOKEN: 25ac4cf4-39e2-4b79-95bd-97528e01d98a
-      JVM_OPTS: -Xmx2g
     steps:
       - checkout
       - run:
