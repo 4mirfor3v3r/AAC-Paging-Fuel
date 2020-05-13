@@ -1,5 +1,5 @@
 # AAC-Paging-Fuel [![CircleCI](https://circleci.com/gh/4mirfor3v3r/AAC-Paging-Fuel/tree/master.svg?style=svg)](https://circleci.com/gh/4mirfor3v3r/AAC-Paging-Fuel/tree/master) ![](https://img.shields.io/badge/tag-1.0.0-brightgreen.svg?style=flat)
-App that using Android Arch Component, Fuel for Networking, Picasso for Image Caching 
+App that using Android Arch Component, Fuel for Networking, Picasso for Image Caching [![codecov](https://codecov.io/gh/4mirfor3v3r/AAC-Paging-Fuel/branch/master/graph/badge.svg)](https://codecov.io/gh/4mirfor3v3r/AAC-Paging-Fuel)
 
 ## Screenshots
 
