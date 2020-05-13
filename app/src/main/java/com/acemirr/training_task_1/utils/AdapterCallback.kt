@@ -4,7 +4,6 @@ import androidx.recyclerview.widget.DiffUtil
 import com.acemirr.training_task_1.ui.menu.grid.model.GridModel
 import com.acemirr.training_task_1.ui.menu.list.model.ListModel
 import com.acemirr.training_task_1.ui.menu.paging.model.News
-//import com.acemirr.training_task_1.data.model.PagingModel
 
 class AdapterCallback {
 

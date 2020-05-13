@@ -5,8 +5,6 @@ orbs:
 
 language: java
 sudo: false
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
 
 jobs:
   build:
@@ -14,16 +12,22 @@ jobs:
     docker:
       - image: circleci/android:api-28
     environment:
-      CODECOV_TOKEN: "25ac4cf4-39e2-4b79-95bd-97528e01d98a"
+      CODECOV_TOKEN: 25ac4cf4-39e2-4b79-95bd-97528e01d98a
       JVM_OPTS: -Xmx4g
     steps:
       - checkout
       - run:
-          name: Change permission
+          name: Change Permission
           command: chmod +x gradlew
       - run:
-          name: Run Lint
-          command: ./gradlew lint
+          name: Run assemble, unit tests, and create coverage report
+          command: ./gradlew lint build createDebugUnitTestCoverageReport
       - run:
-          name: Run Build
-          command: ./gradlew build
+          name: Renaming folder and files of reports so codecov.io can find it
+          command: mv app/build/reports/jacoco/createDebugUnitTestCoverageReport app/build/reports/jacoco/jacocoTestDebugUnitTestReport
+      - run:
+          name: Renaming folder and files of reports so codecov.io can find it
+          command: mv app/build/reports/jacoco/jacocoTestDebugUnitTestReport/createDebugUnitTestCoverageReport.xml app/build/reports/jacoco/jacocoTestDebugUnitTestReport/jacocoTestDebugUnitTestReport.xml
+      - run:
+          name: Run CodeCov
+          command: bash <(curl -s https://codecov.io/bash)
