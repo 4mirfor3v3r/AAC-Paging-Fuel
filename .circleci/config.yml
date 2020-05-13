@@ -27,10 +27,10 @@ jobs:
           name: Run Lint
           command: ./gradlew lintDevelopmentDebug lintDevelopmentRelease
       - run:
-          name: Run Build + Coverage Report
+          name: Run Build
           command: ./gradlew buildDevelopmentDebug buildDevelopmentRelease
       - run:
-          name: Coverage Report
+          name: Run Coverage Report
           command: ./gradlew testDevelopmentDebug createDevelopmentDebugUnitTestCoverageReport
       - run:
           name: Renaming folder and files of reports so codecov.io can find it One
