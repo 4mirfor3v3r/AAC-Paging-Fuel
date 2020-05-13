@@ -20,18 +20,10 @@ android:
 before_script:
   # - android list sdk --extended --no-ui --all
   - chmod +x gradlew      # Grant permissions
-  - android list targets
-  # Create AVD for given api
-  - echo no | android create avd --force --name test --target android-$ANDROID_API_LEVEL --abi $ANDROID_ABI
-  - emulator -list-avds
-  - emulator -avd test -noaudio -no-window -engine classic &    # Start emulator
-  - android-wait-for-emulator
-  - adb devices
 
 script:
   - ./gradlew buildDevelopmentDebug buildDevelopmentRelease
   - ./gradlew testDevelopmentDebug createDevelopmentDebugUnitTestCoverageReport assembleAndroidTest
-  - ./gradlew connectedCheck
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
