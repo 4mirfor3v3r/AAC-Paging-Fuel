@@ -5,8 +5,6 @@ orbs:
 
 language: java
 sudo: false
-after_success:
-  - command: bash <(curl -s https://codecov.io/bash)
 
 jobs:
   build:
@@ -22,7 +20,7 @@ jobs:
           name: Change Permission
           command: chmod +x gradlew
       - run:
-          name: Run Lint.
+          name: Run Lint
           command: ./gradlew lint
       - run:
           name: Run Build
@@ -30,6 +28,12 @@ jobs:
       - run:
           name: Create Coverage Report
           command: ./gradlew createDevelopmentDebugUnitTestCoverageReport
+      - run:
+          name: Renaming folder and files of reports so codecov.io can find it
+          command: mv app/build/reports/jacoco/createDevelopmentDebugUnitTestCoverageReport app/build/reports/jacoco/jacocoTestDevelopmentDebugUnitTestReport
+      - run:
+          name: Renaming folder and files of reports so codecov.io can find it
+          command: mv app/build/reports/jacoco/jacocoTestDevelopmentDebugUnitTestReport/createDevelopmentDebugUnitTestCoverageReport.xml app/build/reports/jacoco/jacocoTestDevelopmentDebugUnitTestReport/jacocoTestDevelopmentDebugUnitTestReport.xml
       - run:
           name: Run CodeCov
           command: bash <(curl -s https://codecov.io/bash)
