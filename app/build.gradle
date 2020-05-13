@@ -45,6 +45,7 @@ android {
 
     buildTypes {
         debug {
+            testCoverageEnabled true
             minifyEnabled false
             signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -89,7 +90,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+        animationsDisabled true
 
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 
@@ -190,7 +198,7 @@ project.afterEvaluate {
                                                  "src/$buildTypeName/kotlin"])
                 )
                 executionData.setFrom(
-                        files("${project.buildDir}/reports/jacoco/${testTaskName}.exec")
+                        files("${project.buildDir}/jacoco/${testTaskName}.exec")
                 )
             }
         }
