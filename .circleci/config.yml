@@ -29,7 +29,7 @@ jobs:
           command: ./gradlew build
       - run:
           name: Create Coverage Report
-          command: ./gradlew jacocoTestReport
+          command: ./gradlew createDevelopmentDebugUnitTestCoverageReport
       - run:
           name: Run CodeCov
           command: bash <(curl -s https://codecov.io/bash)
