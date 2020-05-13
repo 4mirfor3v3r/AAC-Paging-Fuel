@@ -28,9 +28,3 @@ jobs:
       - run:
           name: Run Build
           command: ./gradlew buildDevelopmentDebug buildDevelopmentRelease
-      - run:
-          name: Run Coverage Report
-          command: ./gradlew testDevelopmentDebug createDevelopmentDebugUnitTestCoverageReport
-      - run:
-          name: Run CodeCov
-          command: bash <(curl -s https://codecov.io/bash) -t 25ac4cf4-39e2-4b79-95bd-97528e01d98a
