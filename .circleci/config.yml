@@ -21,13 +21,13 @@ jobs:
           command: chmod +x gradlew
       - run:
           name: Run Lint
-          command: ./gradlew lint
+          command: ./gradlew lintDevelopmentDebug lintDevelopmentRelease
       - run:
           name: Run Build
-          command: ./gradlew build
+          command: ./gradlew buildDevelopmentDebug buildDevelopmentRelease createDevelopmentDebugUnitTestCoverageReport
       - run:
           name: Create Coverage Report
-          command: ./gradlew createDevelopmentDebugUnitTestCoverageReport
+          command: ./gradlew
       - run:
           name: Renaming folder and files of reports so codecov.io can find it
           command: mv app/build/reports/jacoco/createDevelopmentDebugUnitTestCoverageReport app/build/reports/jacoco/jacocoTestDevelopmentDebugUnitTestReport
