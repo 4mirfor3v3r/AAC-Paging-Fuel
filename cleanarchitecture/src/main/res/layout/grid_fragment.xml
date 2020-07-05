@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="vm"
+            type="com.acemirr.cleanarchitecture.presenter.menu.grid.viewmodel.GridViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:setRefresh="@{vm.isLoading}">
+
+            <com.acemirr.cleanarchitecture.external.GridRecyclerView
+                android:id="@+id/rvGrid"
+                android:layoutAnimation="@anim/grid_rv_layoutanimation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_list"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+</layout>

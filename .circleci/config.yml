@@ -19,12 +19,23 @@ jobs:
       - run:
           name: Change Permission
           command: chmod +x gradlew
+
       - run:
           name: Clean Project
           command: ./gradlew clean
+
       - run:
-          name: Run Lint
-          command: ./gradlew lintDevelopmentDebug lintDevelopmentRelease
+          name: Build Debug
+          command: ./gradlew lintProductionDebug buildProductionDebug
+
       - run:
-          name: Run Build
-          command: ./gradlew buildDevelopmentDebug buildDevelopmentRelease
+          name: Generate Coverage Report
+          command: ./gradlew testProductionDebug createProductionDebugCoverageReport assembleAndroidTest
+
+      - run:
+          name: Upload Coverage Results
+          command: bash <(curl -s https://codecov.io/bash)
+
+      - run:
+          name: Build Release
+          command: ./gradlew lintDevelopmentRelease buildDevelopmentRelease

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listFragment"
+    tools:ignore="UnusedNavigation">
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.acemirr.cleanarchitecture.presenter.menu.list.view.ListFragment"
+        android:label="List Place">
+        <action
+            android:id="@+id/action_to_detail_fragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.acemirr.cleanarchitecture.presenter.menu.list.view.DetailListFragment"
+        android:label="Detail Item"
+        tools:layout="@layout/detail_fragment">
+        <argument
+            android:name="data_list_detail"
+            app:argType="com.acemirr.cleanarchitecture.data.model.ListPlaceRemote"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gridFragment"
+        android:name="com.acemirr.cleanarchitecture.presenter.menu.grid.view.GridFragment"
+        android:label="Gallery"
+        tools:layout="@layout/grid_fragment">
+        <action
+            android:id="@+id/action_to_detail_grid_fragment"
+            app:destination="@id/detailGridFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagingFragment"
+        android:name="com.acemirr.cleanarchitecture.presenter.menu.paging.view.PagingFragment"
+        android:label="Paging Data"
+        tools:layout="@layout/paging_fragment" />
+    <fragment
+        android:id="@+id/detailGridFragment"
+        android:name="com.acemirr.cleanarchitecture.presenter.menu.grid.view.DetailGridFragment"
+        android:label="Detail Item"
+        tools:layout="@layout/detail_grid_fragment">
+        <argument
+            android:name="data_grid"
+            app:argType="com.acemirr.cleanarchitecture.presenter.menu.grid.model.GridModel" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
+</navigation>
