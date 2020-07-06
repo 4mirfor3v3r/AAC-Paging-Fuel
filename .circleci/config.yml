@@ -29,13 +29,5 @@ jobs:
           command: ./gradlew lintProductionDebug buildProductionDebug
 
       - run:
-          name: Generate Coverage Report
-          command: ./gradlew testProductionDebug createProductionDebugCoverageReport assembleAndroidTest
-
-      - run:
-          name: Upload Coverage Results
-          command: bash <(curl -s https://codecov.io/bash)
-
-      - run:
           name: Build Release
           command: ./gradlew lintDevelopmentRelease buildDevelopmentRelease

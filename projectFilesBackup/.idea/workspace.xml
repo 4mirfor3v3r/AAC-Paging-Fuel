@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="726f839d-7ca9-41a4-8482-b530d6ed4a1e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/acemirr/training_task_1/utils/SimpleTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/buildScripts/jacoco.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/buildScripts/jacoco.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/acemirr/training_task_1/ui/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/acemirr/training_task_1/ui/activities/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/acemirr/training_task_1/utils/AdapterCallback.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/acemirr/training_task_1/utils/AdapterCallback.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="181" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3_XL" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Training_Task_1" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Training_Task_1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Training_Task_1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="code report quality" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Training_Task_1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="reporting" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="navigationResourceFile" />
+        <option value="Kotlin Object" />
+        <option value="layoutResourceFile" />
+        <option value="Kotlin Class" />
+        <option value="resourceFile" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KotlinCodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ProjectId" id="1asT5jGJBkX7On5iq2KeS9fJspM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="app" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3_XL" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-05-07T09:12:21.300Z" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$ANDROID_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Android_Studio/ModernLoginAnimation" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.16198125" />
+    <property name="settings.editor.selected.configurable" value="coverage" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1589265438462" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Signing Configs" />
+    <option name="BUILD_VARIANTS_TAB" value="Flavors" />
+    <option name="LAST_EDITED_SIGNING_CONFIG" value="release" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+    <option name="LAST_EDITED_FLAVOR_OR_DIMENSION" value="production" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.acemirr.training_task_1.ui.menu.list.viewmodel" />
+      <recent name="com.acemirr.training_task_1.ui.menu.grid.viewmodel" />
+      <recent name="com.acemirr.training_task_1.ui.activities" />
+      <recent name="com.acemirr.training_task_1.ui.menu.paging.adapter" />
+      <recent name="com.acemirr.training_task_1.ui.menu.paging.model" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.acemirr.training_task_1.utils" />
+    </key>
+    <key name="android.template.packageName">
+      <recent name="com.acemirr.training_task_1.ui" />
+      <recent name="com.acemirr.training_task_1.ui.activities" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\Documents\DOT\Training_Task_1\app\src\main\res-menu\paging\layout" />
+      <recent name="C:\Users\Acer\Documents\DOT\Training_Task_1\app\src\main\res-menu\grid\layout" />
+      <recent name="C:\Users\Acer\Documents\DOT\Training_Task_1\app\src\main\res-menu\list\layout" />
+      <recent name="C:\Users\Acer\Documents\DOT\Training_Task_1\app\src\main\java\com\acemirr\training_task_1\ui\menu\paging\model" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.acemirr.training_task_1.ui.menu" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\Documents\DOT\Training_Task_1\app\src\main\res\anim" />
+      <recent name="C:\Users\Acer\Documents\DOT\Training_Task_1\app\src\main\res\drawable" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="MainActivity.hideNavigation" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acemirr.training_task_1.ui.activities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.acemirr.training_task_1.ui.activities" />
+      <option name="MAIN_CLASS_NAME" value="com.acemirr.training_task_1.ui.activities.MainActivity" />
+      <option name="METHOD_NAME" value="hideNavigation" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Training_Task_1 [generateCodeCoverageReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="generateCodeCoverageReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Training_Task_1 [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jacocoTestReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Training_Task_1:app [generateCodeCoverageReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="generateCodeCoverageReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SimpleClassTest.testUsingFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acemirr.training_task_1.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.acemirr.training_task_1.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.acemirr.training_task_1.utils.SimpleClassTest" />
+      <option name="METHOD_NAME" value="testUsingFunction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Training_Task_1 [jacocoTestReport]" />
+        <item itemvalue="Gradle.Training_Task_1 [generateCodeCoverageReport]" />
+        <item itemvalue="Gradle.Training_Task_1:app [generateCodeCoverageReport]" />
+        <item itemvalue="Android JUnit.MainActivity.hideNavigation" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="726f839d-7ca9-41a4-8482-b530d6ed4a1e" name="Default Changelist" comment="" />
+      <created>1587523119977</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587523119977</updated>
+    </task>
+    <task id="LOCAL-00004" summary="animating">
+      <created>1587621196902</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587621196902</updated>
+    </task>
+    <task id="LOCAL-00005" summary="animating">
+      <created>1587624625090</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587624625090</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Optimize Network Code">
+      <created>1587784021056</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587784021056</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Version 1.0.0-beta2">
+      <created>1587795468109</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587795468109</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Version 1.0.0-beta2">
+      <created>1587795594274</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587795594274</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Version 1.0.0-beta2">
+      <created>1587796477494</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587796477494</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Version 1.0.0">
+      <created>1587963159999</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587963159999</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Version 1.0.0">
+      <created>1587964029676</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587964029676</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Version 1.0.0">
+      <created>1588210650269</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1588210650269</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Version 1.0.0">
+      <created>1588574270514</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1588574270514</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Version 1.0.0">
+      <created>1588580597005</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1588580597005</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Version 1.0.0">
+      <created>1588744708654</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1588744708654</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Cleaning Code">
+      <created>1588912526205</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1588912526205</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Cleaning Code">
+      <created>1588913012482</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1588913012482</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Automation test 🚨">
+      <created>1589267226336</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1589267226336</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Automation test 🚨">
+      <created>1589268056938</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1589268056938</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Automation test 🚨">
+      <created>1589268148902</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1589268148902</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Automation test 🚨">
+      <created>1589268342456</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1589268342456</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Automation test 🚨">
+      <created>1589268824712</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1589268824712</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Automation test 🚨">
+      <created>1589269006905</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1589269006905</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Automation test 🚨">
+      <created>1589269627066</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1589269627066</updated>
+    </task>
+    <task id="LOCAL-00025" summary="ADD Code Coverage 🚨">
+      <created>1589338398795</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1589338398795</updated>
+    </task>
+    <task id="LOCAL-00026" summary="ADD Code Coverage 🚨">
+      <created>1589340132031</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1589340132032</updated>
+    </task>
+    <task id="LOCAL-00027" summary="ADD Code Coverage 🚨">
+      <created>1589340477945</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1589340477945</updated>
+    </task>
+    <task id="LOCAL-00028" summary="ADD Code Coverage 🚨">
+      <created>1589341182905</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1589341182905</updated>
+    </task>
+    <task id="LOCAL-00029" summary="ADD Code Coverage 🚨">
+      <created>1589341941256</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1589341941256</updated>
+    </task>
+    <task id="LOCAL-00030" summary="ADD Code Coverage 🚨">
+      <created>1589342796015</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1589342796015</updated>
+    </task>
+    <task id="LOCAL-00031" summary="ADD Code Coverage 🚨">
+      <created>1589343508089</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1589343508089</updated>
+    </task>
+    <task id="LOCAL-00032" summary="ADD Code Coverage 🚨">
+      <created>1589344336257</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1589344336257</updated>
+    </task>
+    <task id="LOCAL-00033" summary="ADD Code Coverage 🚨">
+      <created>1589345454216</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1589345454216</updated>
+    </task>
+    <task id="LOCAL-00034" summary="ADD Code Coverage 🚨">
+      <created>1589346115715</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1589346115715</updated>
+    </task>
+    <task id="LOCAL-00035" summary="ADD Code Coverage 🚨">
+      <created>1589346968021</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1589346968022</updated>
+    </task>
+    <task id="LOCAL-00036" summary="FIX Code Coverage 🚨">
+      <created>1589347333281</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1589347333281</updated>
+    </task>
+    <task id="LOCAL-00037" summary="FIX Code Coverage 🚨">
+      <created>1589347739820</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1589347739820</updated>
+    </task>
+    <task id="LOCAL-00038" summary="FIX Code Coverage 🚨">
+      <created>1589347940173</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1589347940173</updated>
+    </task>
+    <task id="LOCAL-00039" summary="FIX Code Coverage 🚨">
+      <created>1589347984206</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1589347984206</updated>
+    </task>
+    <task id="LOCAL-00040" summary="FIXED Code Coverage 🚨">
+      <created>1589348939615</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1589348939615</updated>
+    </task>
+    <task id="LOCAL-00041" summary="ADDED Code Coverage 🚨">
+      <created>1589351399606</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1589351399607</updated>
+    </task>
+    <task id="LOCAL-00042" summary="ADDED Code Coverage 🚨🧰">
+      <created>1589352109016</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1589352109016</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Code Coverage 🚨">
+      <created>1589363136086</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1589363136086</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Code Coverage 🚨">
+      <created>1589363157232</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1589363157232</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Code Coverage 🚨">
+      <created>1589364333529</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1589364333529</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Code Coverage 🚨">
+      <created>1589367496632</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1589367496632</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Code Coverage">
+      <created>1589370961750</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1589370961750</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Code Coverage">
+      <created>1589375998427</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1589375998427</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Code Coverage 🚨">
+      <created>1589377058502</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1589377058502</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Code Coverage 🚨">
+      <created>1589378247570</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1589378247571</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Code Coverage 🚨">
+      <created>1589378294953</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1589378294953</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Code Coverage 🚨">
+      <created>1589378322010</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1589378322010</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="Navigation" />
+    <MESSAGE value="Paging" />
+    <MESSAGE value="animating" />
+    <MESSAGE value="Optimize Network Code" />
+    <MESSAGE value="Version 1.0.0-beta2" />
+    <MESSAGE value="Version 1.0.0" />
+    <MESSAGE value="Cleaning Code" />
+    <MESSAGE value="Automation test " />
+    <MESSAGE value="ADD Code Coverage " />
+    <MESSAGE value="FIX Code Coverage " />
+    <MESSAGE value="FIXED Code Coverage " />
+    <MESSAGE value="ADDED Code Coverage " />
+    <MESSAGE value="ADDED Code Coverage " />
+    <MESSAGE value="Code Coverage " />
+    <MESSAGE value="Code Coverage" />
+    <MESSAGE value="Code Coverage " />
+    <option name="LAST_COMMIT_MESSAGE" value="Code Coverage " />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Training_Task_1$MainActivity.ic" NAME="MainActivity Coverage Results" MODIFIED="1589451140320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.acemirr.training_task_1.ui.activities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Training_Task_1$MainActivity_hideNavigation.ic" NAME="MainActivity.hideNavigation Coverage Results" MODIFIED="1589451368667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.acemirr.training_task_1.ui.activities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Training_Task_1$SimpleClassTest.ic" NAME="SimpleClassTest Coverage Results" MODIFIED="1589451796386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.acemirr.training_task_1.utils.*</FILTER>
+    </SUITE>
+  </component>
+</project>
