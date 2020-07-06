@@ -4,7 +4,7 @@ import android.content.Context
 import com.acemirr.cleanarchitecture.data.api.ApiServiceImpl
 import com.acemirr.cleanarchitecture.domain.repository.GridRepository
 import com.acemirr.cleanarchitecture.external.logDebug
-import com.acemirr.cleanarchitecture.presenter.menu.grid.model.GridModel
+import com.acemirr.cleanarchitecture.data.model.GridModel
 
 class GridRepositoryImpl(private val apiServiceImpl: ApiServiceImpl): GridRepository {
 

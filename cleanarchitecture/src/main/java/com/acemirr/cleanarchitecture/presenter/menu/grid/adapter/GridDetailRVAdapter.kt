@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.acemirr.cleanarchitecture.R
 import com.acemirr.cleanarchitecture.databinding.ItemGridDetailBinding
 import com.acemirr.cleanarchitecture.external.AppHelper.genericRvDiffUtil
-import com.acemirr.cleanarchitecture.presenter.menu.grid.model.GridModel
+import com.acemirr.cleanarchitecture.data.model.GridModel
 
 class GridDetailRVAdapter :ListAdapter<GridModel, GridDetailRVAdapter.Holder>(genericRvDiffUtil(0)){
     class Holder(val binding: ItemGridDetailBinding):RecyclerView.ViewHolder(binding.root) {

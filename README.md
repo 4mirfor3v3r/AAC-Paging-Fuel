@@ -1,16 +1,36 @@
-# AAC-Paging-Fuel [![CircleCI](https://circleci.com/gh/4mirfor3v3r/AAC-Paging-Fuel/tree/master.svg?style=svg)](https://circleci.com/gh/4mirfor3v3r/AAC-Paging-Fuel/tree/master) ![](https://img.shields.io/badge/tag-1.0.0-brightgreen.svg?style=flat) [![codecov](https://codecov.io/gh/4mirfor3v3r/AAC-Paging-Fuel/branch/master/graph/badge.svg)](https://codecov.io/gh/4mirfor3v3r/AAC-Paging-Fuel) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/36d400fc929e4d05bebbd8a9da483805)](https://www.codacy.com/manual/4mirfor3v3r/AAC-Paging-Fuel?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=4mirfor3v3r/AAC-Paging-Fuel&amp;utm_campaign=Badge_Grade) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=4mirfor3v3r_AAC-Paging-Fuel&metric=alert_status)](https://sonarcloud.io/dashboard?id=4mirfor3v3r_AAC-Paging-Fuel) [![Build Status](https://travis-ci.org/4mirfor3v3r/AAC-Paging-Fuel.svg?branch=master)](https://travis-ci.org/4mirfor3v3r/AAC-Paging-Fuel)
-App that using Android Arch Component, Fuel for Networking, Picasso for Image Caching
+# AAC-Paging-Fuel
+
+<div align="center">
+    <a href="https://circleci.com/gh/4mirfor3v3r/AAC-Paging-Fuel/tree/clean-architecture" alt="API">
+        <img src="https://circleci.com/gh/4mirfor3v3r/AAC-Paging-Fuel/tree/clean-architecture.svg?style=svg" />
+    </a>
+    <a href="https://gitlab.com/pt-dot-internal/taprose-android/pipelines" alt="Build">
+        <img src="https://img.shields.io/badge/tag-1.0.0-brightgreen.svg?style=flat" />
+    </a>
+    <a href="https://codecov.io/gh/4mirfor3v3r/AAC-Paging-Fuel" alt="Deploy">
+        <img src="https://codecov.io/gh/4mirfor3v3r/AAC-Paging-Fuel/branch/clean-architecture/graph/badge.svg" />
+    </a>
+  <a href="https://www.codacy.com/manual/4mirfor3v3r/AAC-Paging-Fuel?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=4mirfor3v3r/AAC-Paging-Fuel&amp;utm_campaign=Badge_Grade" alt="API">
+        <img src="https://api.codacy.com/project/badge/Grade/36d400fc929e4d05bebbd8a9da483805" />
+    </a>
+    <a href="https://sonarcloud.io/dashboard?id=4mirfor3v3r_AAC-Paging-Fuel" alt="Build">
+        <img src="https://sonarcloud.io/api/project_badges/measure?project=4mirfor3v3r_AAC-Paging-Fuel&metric=alert_status" />
+    </a>
+    <a href="https://travis-ci.org/4mirfor3v3r/AAC-Paging-Fuel" alt="Deploy">
+        <img src="https://travis-ci.org/4mirfor3v3r/AAC-Paging-Fuel.svg?branch=clean-architecture" />
+    </a>
+</div>
 
 ## Screenshots
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/1.jpg" />
-  <img src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/2.jpg" /> 
-  <img src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/3.jpg" />
+  <img width="250" src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/clean-architecture/screenshoots/1.jpg" />
+  <img width="250" src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/clean-architecture/screenshoots/2.jpg" />
+  <img width="250" src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/clean-architecture/screenshoots/3.jpg" />
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/5.jpg" />
-  <img src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/master/screenshoots/4.jpg" /> 
+  <img width="250" src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/clean-architecture/screenshoots/5.jpg" />
+  <img width="250" src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/clean-architecture/screenshoots/4.jpg" />
 </p>
 
 ## Builded with
@@ -29,3 +49,9 @@ App that using Android Arch Component, Fuel for Networking, Picasso for Image Ca
 
 ## Download Apk
  - https://drive.google.com/file/d/1PFyhcmZjtjiY88yyv3Vh4OOrlKwqo3Zh/view?usp=sharing
+
+## TODO
+  * [x] Responsive UI
+  * [ ] Full Clean Architecture
+  * [ ] Search Feature
+  * [ ] Code Coverage

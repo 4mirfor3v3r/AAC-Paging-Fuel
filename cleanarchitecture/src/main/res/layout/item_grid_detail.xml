@@ -5,7 +5,7 @@
 
     <data>
         <variable name="data"
-            type="com.acemirr.cleanarchitecture.presenter.menu.grid.model.GridModel"/>
+            type="com.acemirr.cleanarchitecture.data.model.GridModel"/>
     </data>
 
     <androidx.cardview.widget.CardView

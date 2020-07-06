@@ -16,7 +16,7 @@ import com.acemirr.cleanarchitecture.R
 import com.acemirr.cleanarchitecture.databinding.GridFragmentBinding
 import com.acemirr.cleanarchitecture.presenter.base.ViewModelFactory
 import com.acemirr.cleanarchitecture.presenter.menu.grid.adapter.GridRVAdapter
-import com.acemirr.cleanarchitecture.presenter.menu.grid.model.GridModel
+import com.acemirr.cleanarchitecture.data.model.GridModel
 import com.acemirr.cleanarchitecture.presenter.menu.grid.viewmodel.GridViewModel
 
 class GridFragment : Fragment() {

@@ -52,7 +52,7 @@
         tools:layout="@layout/detail_grid_fragment">
         <argument
             android:name="data_grid"
-            app:argType="com.acemirr.cleanarchitecture.presenter.menu.grid.model.GridModel" />
+            app:argType="com.acemirr.cleanarchitecture.data.model.GridModel" />
         <argument
             android:name="position"
             app:argType="integer" />

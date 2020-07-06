@@ -26,8 +26,8 @@ jobs:
 
       - run:
           name: Build Debug
-          command: ./gradlew lintProductionDebug buildProductionDebug
+          command: ./gradlew lintDebug buildDebug
 
       - run:
           name: Build Release
-          command: ./gradlew lintDevelopmentRelease buildDevelopmentRelease
+          command: ./gradlew lintRelease buildRelease

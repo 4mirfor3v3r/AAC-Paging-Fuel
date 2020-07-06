@@ -3,7 +3,7 @@ package com.acemirr.cleanarchitecture.data.api
 import android.content.Context
 import com.acemirr.cleanarchitecture.data.model.ListPlaceRemote
 import com.acemirr.cleanarchitecture.data.model.PagingResponse
-import com.acemirr.cleanarchitecture.presenter.menu.grid.model.GridModel
+import com.acemirr.cleanarchitecture.data.model.GridModel
 
 interface ApiService {
     fun getListPlace(

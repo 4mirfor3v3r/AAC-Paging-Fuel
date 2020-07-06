@@ -18,7 +18,7 @@ import com.acemirr.cleanarchitecture.external.CenterZoomLayoutManager
 import com.acemirr.cleanarchitecture.presenter.activities.MainActivity
 import com.acemirr.cleanarchitecture.presenter.base.ViewModelFactory
 import com.acemirr.cleanarchitecture.presenter.menu.grid.adapter.GridDetailRVAdapter
-import com.acemirr.cleanarchitecture.presenter.menu.grid.model.GridModel
+import com.acemirr.cleanarchitecture.data.model.GridModel
 import com.acemirr.cleanarchitecture.presenter.menu.grid.viewmodel.DetailGridViewModel
 
 class DetailGridFragment: Fragment() {

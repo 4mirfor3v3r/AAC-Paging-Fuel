@@ -1,4 +1,4 @@
-package com.acemirr.cleanarchitecture.presenter.menu.grid.model
+package com.acemirr.cleanarchitecture.data.model
 
 import android.os.Parcelable
 import androidx.annotation.Keep

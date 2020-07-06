@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.acemirr.cleanarchitecture.domain.usecase.GridUseCase
-import com.acemirr.cleanarchitecture.presenter.menu.grid.model.GridModel
+import com.acemirr.cleanarchitecture.data.model.GridModel
 
 class GridViewModel(private val useCase: GridUseCase) : ViewModel() {
 
