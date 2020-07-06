@@ -8,9 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.acemirr.cleanarchitecture.R
 import com.acemirr.cleanarchitecture.data.model.ListPlaceRemote
 import com.acemirr.cleanarchitecture.databinding.ItemListBinding
-import com.acemirr.cleanarchitecture.external.AdapterCallback
+import com.acemirr.cleanarchitecture.external.AppHelper.genericRvDiffUtil
 
-class ListRVAdapter(val onClick:(ListPlaceRemote) -> Unit):ListAdapter<ListPlaceRemote, ListRVAdapter.Holder>(AdapterCallback.DiffListCallback) {
+class ListRVAdapter(val onClick:(ListPlaceRemote) -> Unit)
+    : ListAdapter<ListPlaceRemote, ListRVAdapter.Holder>(genericRvDiffUtil<ListPlaceRemote>(0)) {
     class Holder(private val itemListBinding: ItemListBinding):RecyclerView.ViewHolder(itemListBinding.root) {
         fun bindView(listModel: ListPlaceRemote) {
             itemListBinding.data = listModel

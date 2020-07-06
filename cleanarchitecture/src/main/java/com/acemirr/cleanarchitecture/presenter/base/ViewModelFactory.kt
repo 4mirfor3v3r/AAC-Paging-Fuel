@@ -11,6 +11,7 @@ import com.acemirr.cleanarchitecture.domain.usecase.ListUseCase
 import com.acemirr.cleanarchitecture.domain.usecase.PagingUseCase
 import com.acemirr.cleanarchitecture.presenter.menu.grid.viewmodel.DetailGridViewModel
 import com.acemirr.cleanarchitecture.presenter.menu.grid.viewmodel.GridViewModel
+import com.acemirr.cleanarchitecture.presenter.menu.list.viewmodel.DetailListViewModel
 import com.acemirr.cleanarchitecture.presenter.menu.list.viewmodel.ListViewModel
 import com.acemirr.cleanarchitecture.presenter.menu.paging.viewmodel.PagingViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -31,8 +32,8 @@ class ViewModelFactory(private val scope: CoroutineScope) : ViewModelProvider.Fa
             modelClass.isAssignableFrom(PagingViewModel::class.java) ->
                 PagingViewModel(PagingUseCase(PagingRepositoryImpl(ApiServiceImpl(scope)))) as T
 
-//            modelClass.isAssignableFrom(Detail::class.java) ->
-//                FavoriteActivityViewModel(FavoriteRepo(context, scope)) as T
+            modelClass.isAssignableFrom(DetailListViewModel::class.java) ->
+                DetailListViewModel(ListUseCase(ListRepositoryImpl(ApiServiceImpl(scope)))) as T
 
             else -> throw IllegalArgumentException("Unknown Class Name")
         }

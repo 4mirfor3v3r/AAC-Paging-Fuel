@@ -12,11 +12,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.acemirr.cleanarchitecture.R
 import com.acemirr.cleanarchitecture.data.model.News
 import com.acemirr.cleanarchitecture.databinding.ItemPagingBinding
-import com.acemirr.cleanarchitecture.external.AdapterCallback
+import com.acemirr.cleanarchitecture.external.AppHelper.genericRvDiffUtil
 import com.acemirr.cleanarchitecture.external.LoadingState
 
 class PagingRVAdapter(val onClick: (News) -> Unit) :
-    PagedListAdapter<News, RecyclerView.ViewHolder>(AdapterCallback.DiffPagingCallback) {
+    PagedListAdapter<News, RecyclerView.ViewHolder>(genericRvDiffUtil(0)) {
 
     companion object {
         const val VIEW_TYPE_ITEM = 1
