@@ -1,4 +1,4 @@
-package com.acemirr.cleanarchitecture.data.api
+package com.acemirr.cleanarchitecture.data.source.remote
 
 import com.acemirr.cleanarchitecture.BuildConfig
 

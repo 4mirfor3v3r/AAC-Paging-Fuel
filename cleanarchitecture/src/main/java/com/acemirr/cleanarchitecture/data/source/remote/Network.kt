@@ -1,4 +1,4 @@
-package com.acemirr.cleanarchitecture.data.api
+package com.acemirr.cleanarchitecture.data.source.remote
 
 import android.content.Context
 import com.acemirr.cleanarchitecture.external.logDebug

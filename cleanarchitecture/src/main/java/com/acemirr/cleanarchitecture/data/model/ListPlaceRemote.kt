@@ -16,7 +16,7 @@ data class ListPlaceRemote(
     @SerializedName("deskripsi") @Expose
     val description: String,
     @SerializedName("thumbnail") @Expose
-    val thumbnail: String,
+    val thumbnail: String= "",
     @SerializedName("gambar") @Expose
-    val image: String
+    val image: String=""
 ) : Parcelable

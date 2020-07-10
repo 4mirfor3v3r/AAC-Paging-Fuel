@@ -2,39 +2,31 @@ package com.acemirr.cleanarchitecture.presenter.menu.list.view
 
 import android.content.res.Configuration
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.acemirr.cleanarchitecture.R
 import com.acemirr.cleanarchitecture.data.model.ListPlaceRemote
 import com.acemirr.cleanarchitecture.databinding.ListFragmentBinding
-import com.acemirr.cleanarchitecture.presenter.base.ViewModelFactory
+import com.acemirr.cleanarchitecture.presenter.base.BaseFragment
 import com.acemirr.cleanarchitecture.presenter.menu.list.adapter.ListRVAdapter
 import com.acemirr.cleanarchitecture.presenter.menu.list.viewmodel.ListViewModel
+import javax.inject.Inject
 
-class ListFragment : Fragment() {
+class ListFragment : BaseFragment<ListViewModel,ListFragmentBinding>(R.layout.list_fragment) {
 
-    private lateinit var viewModel: ListViewModel
-    lateinit var binding:ListFragmentBinding
     private lateinit var adapter: ListRVAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.list_fragment, container, false)
-        binding.lifecycleOwner = this
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
-        return binding.root
+    override fun createViewModel(): ListViewModel {
+        return ViewModelProvider(this, viewModelFactory).get(ListViewModel::class.java)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this,ViewModelFactory(lifecycleScope)).get(ListViewModel::class.java)
         binding.vm = viewModel
 
         setupSwipeRefresh()
@@ -84,4 +76,5 @@ class ListFragment : Fragment() {
         action.dataListDetail = modelModel
         findNavController().navigate(action)
     }
+
 }

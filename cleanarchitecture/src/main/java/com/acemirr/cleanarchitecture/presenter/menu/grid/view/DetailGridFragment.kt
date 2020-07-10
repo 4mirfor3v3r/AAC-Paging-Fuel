@@ -1,11 +1,7 @@
 package com.acemirr.cleanarchitecture.presenter.menu.grid.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -13,18 +9,18 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import com.acemirr.cleanarchitecture.R
+import com.acemirr.cleanarchitecture.data.model.GridModel
 import com.acemirr.cleanarchitecture.databinding.DetailGridFragmentBinding
 import com.acemirr.cleanarchitecture.external.CenterZoomLayoutManager
 import com.acemirr.cleanarchitecture.presenter.activities.MainActivity
+import com.acemirr.cleanarchitecture.presenter.base.BaseFragment
 import com.acemirr.cleanarchitecture.presenter.base.ViewModelFactory
 import com.acemirr.cleanarchitecture.presenter.menu.grid.adapter.GridDetailRVAdapter
-import com.acemirr.cleanarchitecture.data.model.GridModel
 import com.acemirr.cleanarchitecture.presenter.menu.grid.viewmodel.DetailGridViewModel
+import javax.inject.Inject
 
-class DetailGridFragment: Fragment() {
+class DetailGridFragment: BaseFragment<DetailGridViewModel,DetailGridFragmentBinding>(R.layout.detail_grid_fragment) {
 
-    private lateinit var binding: DetailGridFragmentBinding
-    private lateinit var viewModel: DetailGridViewModel
     private var adapter =
         GridDetailRVAdapter()
 
@@ -32,15 +28,17 @@ class DetailGridFragment: Fragment() {
     private var galleryModel: GridModel? = null
     private var position : Int ?=null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        galleryModel = args.dataGrid
-        position = args.position
-        binding = DataBindingUtil.inflate(inflater, R.layout.detail_grid_fragment, container, false)
-        return binding.root
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    override fun createViewModel(): DetailGridViewModel {
+        return ViewModelProvider(this,viewModelFactory).get(DetailGridViewModel::class.java)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        galleryModel = args.dataGrid
+        position = args.position
         (activity as MainActivity).hideNavigation(true)
         viewModel = ViewModelProvider(this, ViewModelFactory(lifecycleScope)).get(DetailGridViewModel::class.java)
         binding.vm = viewModel

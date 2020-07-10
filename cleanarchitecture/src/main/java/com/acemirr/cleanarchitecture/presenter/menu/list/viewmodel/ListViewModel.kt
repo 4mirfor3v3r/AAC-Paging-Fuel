@@ -5,8 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.acemirr.cleanarchitecture.data.model.ListPlaceRemote
 import com.acemirr.cleanarchitecture.domain.usecase.ListUseCase
+import javax.inject.Inject
 
-class ListViewModel(private val usecase: ListUseCase) : ViewModel() {
+class ListViewModel @Inject constructor(private val usecase: ListUseCase) : ViewModel() {
 
     var liveDataList: MutableLiveData<MutableList<ListPlaceRemote>> = MutableLiveData()
     var isLoading: MutableLiveData<Boolean> = MutableLiveData()

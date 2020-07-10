@@ -1,11 +1,15 @@
 buildscript {
     repositories {
         mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
 
 
     dependencies {
         classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:1.0.2'
+        classpath "gradle.plugin.dev.arunkumar:scabbard-gradle-plugin:0.4.0"
     }
 }
 
@@ -14,7 +18,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs"
-
+apply plugin: "scabbard.gradle"
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -38,6 +42,9 @@ android {
     }
     dataBinding {
         enabled = true
+    }
+    scabbard {
+        enabled true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -87,7 +94,10 @@ dependencies {
 
 //    Dagger
     kapt "com.google.dagger:dagger-compiler:2.25.4"
+    kapt "com.google.dagger:dagger-android-processor:2.27"
     implementation "com.google.dagger:dagger:2.27"
+    implementation "com.google.dagger:dagger-android-support:2.27"
+    implementation "com.google.dagger:dagger-android-support:2.27"
 
 //    scale
     implementation "com.intuit.ssp:ssp-android:$sspVersion"

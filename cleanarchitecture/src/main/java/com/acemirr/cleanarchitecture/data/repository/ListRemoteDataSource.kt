@@ -1,3 +1,0 @@
-package com.acemirr.cleanarchitecture.data.repository
-
-class ListRemoteDataSource

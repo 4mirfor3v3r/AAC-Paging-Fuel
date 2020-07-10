@@ -1,41 +1,36 @@
 package com.acemirr.cleanarchitecture.presenter.menu.list.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
 import com.acemirr.cleanarchitecture.R
 import com.acemirr.cleanarchitecture.data.model.ListPlaceRemote
 import com.acemirr.cleanarchitecture.databinding.DetailFragmentBinding
 import com.acemirr.cleanarchitecture.presenter.activities.MainActivity
-import com.acemirr.cleanarchitecture.presenter.base.ViewModelFactory
+import com.acemirr.cleanarchitecture.presenter.base.BaseFragment
 import com.acemirr.cleanarchitecture.presenter.menu.list.viewmodel.DetailListViewModel
+import javax.inject.Inject
 
-class DetailListFragment : Fragment() {
-
-    lateinit var binding: DetailFragmentBinding
-    private lateinit var viewModel: DetailListViewModel
+class DetailListFragment : BaseFragment<DetailListViewModel,DetailFragmentBinding>(R.layout.detail_fragment) {
 
     private val args: DetailListFragmentArgs? by navArgs()
     private var listModel: ListPlaceRemote? = null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        listModel = args?.dataListDetail
-        binding = DataBindingUtil.inflate(inflater, R.layout.detail_fragment, container, false)
-        return binding.root
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
+
+
+    override fun createViewModel(): DetailListViewModel {
+        return ViewModelProvider(this, viewModelFactory).get(DetailListViewModel::class.java)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         (activity as MainActivity).hideNavigation(true)
+        listModel = args?.dataListDetail
 
-
-        viewModel = ViewModelProvider(this, ViewModelFactory(lifecycleScope)).get(DetailListViewModel::class.java)
+//        viewModel = ViewModelProvider(this, ViewModelFactory(lifecycleScope)).get(DetailListViewModel::class.java)
         binding.tvTitle.visibility = View.VISIBLE
         binding.vm = viewModel
 
@@ -50,5 +45,6 @@ class DetailListFragment : Fragment() {
         viewModel.description.set(listModel?.description)
         viewModel.imageUrl.set(listModel?.image)
     }
+
 
 }
