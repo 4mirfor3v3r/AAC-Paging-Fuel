@@ -3,15 +3,12 @@ package com.acemirr.cleanarchitecture.data.datasource.list
 import android.content.Context
 import com.acemirr.cleanarchitecture.data.model.ListPlaceModel
 import com.acemirr.cleanarchitecture.data.source.local.dao.ListDao
+import com.acemirr.cleanarchitecture.data.source.local.entity.LocalListModel
 import com.acemirr.cleanarchitecture.data.utils.DataNotAvailableException
 import com.acemirr.cleanarchitecture.data.utils.DiskExecutor
 import com.acemirr.cleanarchitecture.data.utils.Mapper
 import com.acemirr.cleanarchitecture.data.utils.ResState
-import com.acemirr.cleanarchitecture.data.source.local.entity.LocalListModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 import javax.inject.Inject
 
 class ListLocalDataSource @Inject constructor(
@@ -22,6 +19,7 @@ class ListLocalDataSource @Inject constructor(
 
     override fun getListPlaces(context: Context): ResState<List<ListPlaceModel>>? {
         return runBlocking {
+            delay(1000)
             val res = async {
                 val ret = withContext(scope.coroutineContext) { dao.getAllList() }
                 return@async if (ret.isNotEmpty()){
