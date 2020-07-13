@@ -34,7 +34,7 @@
 </p>
 
 ## Clean Architecture Flow
-<img width="800" src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/clean-architecture/screenshoots/clean-architecture-flow.jpg" />
+<img width="800" src="https://raw.githubusercontent.com/4mirfor3v3r/AAC-Paging-Fuel/clean-architecture/screenshoots/clean-architecture-flow.png" />
 
 Full Package Structure Follow this [link](https://app.diagrams.net/?lightbox=1&target=blank&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Clean-AAC-Diagrams.xml#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1XxwQ4o8l5561a-N6WVcb2gdM-pR-ussj%26export%3Ddownload "link")
 
