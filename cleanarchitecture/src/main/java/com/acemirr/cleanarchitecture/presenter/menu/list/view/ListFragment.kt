@@ -2,21 +2,23 @@ package com.acemirr.cleanarchitecture.presenter.menu.list.view
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.acemirr.cleanarchitecture.R
-import com.acemirr.cleanarchitecture.data.model.ListPlaceRemote
+import com.acemirr.cleanarchitecture.data.model.ListPlaceModel
 import com.acemirr.cleanarchitecture.databinding.ListFragmentBinding
 import com.acemirr.cleanarchitecture.presenter.base.BaseFragment
+import com.acemirr.cleanarchitecture.presenter.menu.list.adapter.ListRVAction
 import com.acemirr.cleanarchitecture.presenter.menu.list.adapter.ListRVAdapter
 import com.acemirr.cleanarchitecture.presenter.menu.list.viewmodel.ListViewModel
 import javax.inject.Inject
 
-class ListFragment : BaseFragment<ListViewModel,ListFragmentBinding>(R.layout.list_fragment) {
+class ListFragment : BaseFragment<ListViewModel, ListFragmentBinding>(R.layout.list_fragment) {
 
-    private lateinit var adapter: ListRVAdapter
+    private var adapter = ListRVAdapter()
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -60,19 +62,18 @@ class ListFragment : BaseFragment<ListViewModel,ListFragmentBinding>(R.layout.li
         val layoutManager = LinearLayoutManager(context)
         binding.rvList.layoutManager = layoutManager
 
-        adapter =
-            ListRVAdapter {
-                onItemClick(it)
+        adapter.setOnAction(object : ListRVAction {
+            override fun onContainerClickListener(v: View, data: ListPlaceModel) {
+                onItemClick(data)
             }
+        })
 
         binding.rvList.adapter = adapter
     }
 
-    private fun onItemClick(modelModel: ListPlaceRemote) {
+    private fun onItemClick(modelModel: ListPlaceModel) {
         val action =
-            ListFragmentDirections.actionToDetailFragment(
-                modelModel
-            )
+            ListFragmentDirections.actionToDetailFragment(modelModel)
         action.dataListDetail = modelModel
         findNavController().navigate(action)
     }

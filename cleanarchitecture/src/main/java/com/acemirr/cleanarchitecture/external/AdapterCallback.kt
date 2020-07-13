@@ -1,45 +1,45 @@
 package com.acemirr.cleanarchitecture.external
 
 import androidx.recyclerview.widget.DiffUtil
-import com.acemirr.cleanarchitecture.data.model.GridModel
-import com.acemirr.cleanarchitecture.data.model.ListPlaceRemote
-import com.acemirr.cleanarchitecture.data.model.News
+import com.acemirr.cleanarchitecture.data.model.GridGalleryModel
+import com.acemirr.cleanarchitecture.data.model.ListPlaceModel
+import com.acemirr.cleanarchitecture.data.model.PagingNewsModel
 
 class AdapterCallback {
 
     companion object {
 
-        val DiffDetailGridCallback = object : DiffUtil.ItemCallback<GridModel>() {
-            override fun areItemsTheSame(oldItem: GridModel, newItem: GridModel): Boolean {
+        val DiffDetailGridCallback = object : DiffUtil.ItemCallback<GridGalleryModel>() {
+            override fun areItemsTheSame(oldItem: GridGalleryModel, newItem: GridGalleryModel): Boolean {
                 return oldItem == newItem
             }
 
-            override fun areContentsTheSame(oldItem: GridModel, newItem: GridModel): Boolean {
+            override fun areContentsTheSame(oldItem: GridGalleryModel, newItem: GridGalleryModel): Boolean {
                 return oldItem.caption == newItem.caption
             }
         }
-        val DiffListCallback = object : DiffUtil.ItemCallback<ListPlaceRemote>() {
+        val DiffListCallback = object : DiffUtil.ItemCallback<ListPlaceModel>() {
             override fun areItemsTheSame(
-                oldItem: ListPlaceRemote,
-                newItem: ListPlaceRemote
+                oldItem: ListPlaceModel,
+                newItem: ListPlaceModel
             ): Boolean {
                 return oldItem == newItem
             }
 
             override fun areContentsTheSame(
-                oldItem: ListPlaceRemote,
-                newItem: ListPlaceRemote
+                oldItem: ListPlaceModel,
+                newItem: ListPlaceModel
             ): Boolean {
                 return oldItem.name == newItem.name
             }
 
         }
-        val DiffGridCallback = object : DiffUtil.ItemCallback<GridModel>() {
-            override fun areItemsTheSame(oldItem: GridModel, newItem: GridModel): Boolean {
+        val DiffGridCallback = object : DiffUtil.ItemCallback<GridGalleryModel>() {
+            override fun areItemsTheSame(oldItem: GridGalleryModel, newItem: GridGalleryModel): Boolean {
                 return oldItem == newItem
             }
 
-            override fun areContentsTheSame(oldItem: GridModel, newItem: GridModel): Boolean {
+            override fun areContentsTheSame(oldItem: GridGalleryModel, newItem: GridGalleryModel): Boolean {
                 return oldItem.caption == newItem.caption
             }
 
@@ -48,12 +48,12 @@ class AdapterCallback {
         /**
          * diff callback adapter notification
          */
-        val DiffPagingCallback = object : DiffUtil.ItemCallback<News>() {
-            override fun areItemsTheSame(oldItem: News, newItem: News): Boolean {
+        val DiffPagingCallback = object : DiffUtil.ItemCallback<PagingNewsModel>() {
+            override fun areItemsTheSame(oldItem: PagingNewsModel, newItem: PagingNewsModel): Boolean {
                 return oldItem.title == newItem.title
             }
 
-            override fun areContentsTheSame(oldItem: News, newItem: News): Boolean {
+            override fun areContentsTheSame(oldItem: PagingNewsModel, newItem: PagingNewsModel): Boolean {
                 return oldItem == newItem
             }
 

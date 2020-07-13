@@ -6,7 +6,10 @@
     <data>
         <variable
             name="data"
-            type="com.acemirr.cleanarchitecture.data.model.News" />
+            type="com.acemirr.cleanarchitecture.data.model.PagingNewsModel" />
+        <variable
+            name="action"
+            type="com.acemirr.cleanarchitecture.presenter.menu.paging.adapter.PagingRVAction" />
     </data>
 
     <androidx.cardview.widget.CardView

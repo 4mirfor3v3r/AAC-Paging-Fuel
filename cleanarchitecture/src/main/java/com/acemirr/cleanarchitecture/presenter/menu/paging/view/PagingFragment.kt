@@ -1,43 +1,37 @@
 package com.acemirr.cleanarchitecture.presenter.menu.paging.view
 
-//import com.acemirr.cleanarchitecture.data.model.PagingModel
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.acemirr.cleanarchitecture.R
-import com.acemirr.cleanarchitecture.data.model.News
+import com.acemirr.cleanarchitecture.data.model.PagingNewsModel
 import com.acemirr.cleanarchitecture.databinding.PagingFragmentBinding
 import com.acemirr.cleanarchitecture.external.Constant.EXTRA_DATA_PAGING
 import com.acemirr.cleanarchitecture.presenter.activities.MainActivity
 import com.acemirr.cleanarchitecture.presenter.activities.PagingDetailActivity
-import com.acemirr.cleanarchitecture.presenter.base.ViewModelFactory
+import com.acemirr.cleanarchitecture.presenter.base.BaseFragment
+import com.acemirr.cleanarchitecture.presenter.menu.paging.adapter.PagingRVAction
 import com.acemirr.cleanarchitecture.presenter.menu.paging.adapter.PagingRVAdapter
 import com.acemirr.cleanarchitecture.presenter.menu.paging.viewmodel.PagingViewModel
+import javax.inject.Inject
 
-class PagingFragment : Fragment() {
+class PagingFragment : BaseFragment<PagingViewModel, PagingFragmentBinding>(R.layout.paging_fragment) {
 
-    private lateinit var binding: PagingFragmentBinding
-    private lateinit var viewModel: PagingViewModel
+    private var adapter = PagingRVAdapter()
 
-    private lateinit var adapter: PagingRVAdapter
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.paging_fragment, container, false)
-        return binding.root
+    override fun createViewModel(): PagingViewModel {
+        return ViewModelProvider(this, viewModelFactory).get(PagingViewModel::class.java)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this,ViewModelFactory(lifecycleScope)).get(PagingViewModel::class.java)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         binding.vm = viewModel
 
         setupRecyclerView()
@@ -53,10 +47,13 @@ class PagingFragment : Fragment() {
     private fun setupRecyclerView() {
         val layoutManager = LinearLayoutManager(context)
         binding.recyclerViewListNotification.layoutManager = layoutManager
-        adapter =
-            PagingRVAdapter {
-                onItemClicked(it)
+
+        adapter.setOnAction(object : PagingRVAction {
+            override fun onContainerClick(v: View, data: PagingNewsModel) {
+                onItemClicked(data)
             }
+        })
+
         binding.recyclerViewListNotification.adapter = adapter
     }
 
@@ -70,7 +67,7 @@ class PagingFragment : Fragment() {
         })
     }
 
-    private fun onItemClicked(pagingModel: News) {
+    private fun onItemClicked(pagingModel: PagingNewsModel) {
         val intent = Intent(context, PagingDetailActivity::class.java)
         intent.putExtra(EXTRA_DATA_PAGING, pagingModel)
         startActivity(intent)

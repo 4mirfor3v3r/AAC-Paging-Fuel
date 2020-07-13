@@ -5,7 +5,13 @@
 
     <data>
         <variable name="data"
-            type="com.acemirr.cleanarchitecture.data.model.GridModel"/>
+            type="com.acemirr.cleanarchitecture.data.model.GridGalleryModel"/>
+        <variable
+            name="position"
+            type="Integer" />
+        <variable
+            name="action"
+            type="com.acemirr.cleanarchitecture.presenter.menu.grid.adapter.GridRVAction" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -15,13 +21,14 @@
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{(v) -> action.onContainerClickListener(v,data,position)}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.acemirr.cleanarchitecture.external.CustomImageView
+        <com.acemirr.cleanarchitecture.external.widget.CustomImageView
             android:id="@+id/imageViewItemGallery"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

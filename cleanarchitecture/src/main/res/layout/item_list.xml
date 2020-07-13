@@ -7,15 +7,19 @@
         <import type="android.view.View" />
         <variable
             name="data"
-            type="com.acemirr.cleanarchitecture.data.model.ListPlaceRemote" />
+            type="com.acemirr.cleanarchitecture.data.model.ListPlaceModel" />
+        <variable
+            name="action"
+            type="com.acemirr.cleanarchitecture.presenter.menu.list.adapter.ListRVAction" />
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_150sdp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:onClick="@{(v) -> action.onContainerClickListener(v,data) }"
         app:cardCornerRadius="12dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout

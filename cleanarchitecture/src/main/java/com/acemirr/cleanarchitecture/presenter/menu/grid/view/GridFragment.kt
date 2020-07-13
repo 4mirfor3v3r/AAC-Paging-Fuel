@@ -2,21 +2,23 @@ package com.acemirr.cleanarchitecture.presenter.menu.grid.view
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.acemirr.cleanarchitecture.R
-import com.acemirr.cleanarchitecture.data.model.GridModel
+import com.acemirr.cleanarchitecture.data.model.GridGalleryModel
 import com.acemirr.cleanarchitecture.databinding.GridFragmentBinding
 import com.acemirr.cleanarchitecture.presenter.base.BaseFragment
+import com.acemirr.cleanarchitecture.presenter.menu.grid.adapter.GridRVAction
 import com.acemirr.cleanarchitecture.presenter.menu.grid.adapter.GridRVAdapter
 import com.acemirr.cleanarchitecture.presenter.menu.grid.viewmodel.GridViewModel
 import javax.inject.Inject
 
 class GridFragment : BaseFragment<GridViewModel, GridFragmentBinding>(R.layout.grid_fragment) {
 
-    private lateinit var adapter: GridRVAdapter
+    private var adapter = GridRVAdapter()
 
 
     @Inject
@@ -64,23 +66,25 @@ class GridFragment : BaseFragment<GridViewModel, GridFragmentBinding>(R.layout.g
     }
 
     private fun setupRecyclerView() {
-        val layoutManager = GridLayoutManager(context,3)
+        val layoutManager = GridLayoutManager(context, 3)
         binding.rvGrid.layoutManager = layoutManager
 
-        adapter =
-            GridRVAdapter { gridModel, position ->
-                onItemClick(gridModel, position)
+        adapter.setOnAction(object : GridRVAction {
+            override fun onContainerClickListener(v: View, data: GridGalleryModel, position: Int) {
+                onItemClick(data, position)
             }
+        })
+
         binding.rvGrid.adapter = adapter
     }
 
-    private fun onItemClick(gridModel: GridModel, position: Int) {
+    private fun onItemClick(gridGalleryModel: GridGalleryModel, position: Int) {
         val action =
             GridFragmentDirections.actionToDetailGridFragment(
-                gridModel,
+                gridGalleryModel,
                 position
             )
-        action.dataGrid = gridModel
+        action.dataGrid = gridGalleryModel
         action.position = position
         findNavController().navigate(action)
     }

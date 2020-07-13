@@ -17,7 +17,7 @@ abstract class BaseFragment<VM:ViewModel,BIND:ViewDataBinding>(@LayoutRes privat
     protected lateinit var viewModel:VM
 
     @Inject
-    lateinit var daggerViewModelFactory: DaggersViewModelFactory
+    lateinit var daggerViewModelFactory: DaggerViewModelFactory
 
     protected abstract fun createViewModel():VM
 

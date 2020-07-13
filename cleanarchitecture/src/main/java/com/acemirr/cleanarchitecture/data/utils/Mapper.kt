@@ -1,13 +1,15 @@
 package com.acemirr.cleanarchitecture.data.utils
 
-import com.acemirr.cleanarchitecture.data.model.GridModel
-import com.acemirr.cleanarchitecture.data.model.ListPlaceRemote
-import com.acemirr.cleanarchitecture.domain.model.LocalGridModel
-import com.acemirr.cleanarchitecture.domain.model.LocalListModel
+import com.acemirr.cleanarchitecture.data.model.GridGalleryModel
+import com.acemirr.cleanarchitecture.data.model.ListPlaceModel
+import com.acemirr.cleanarchitecture.data.model.PagingNewsModel
+import com.acemirr.cleanarchitecture.data.source.local.entity.LocalGridModel
+import com.acemirr.cleanarchitecture.data.source.local.entity.LocalListModel
+import com.acemirr.cleanarchitecture.data.source.local.entity.LocalNewsModel
 
 object Mapper {
-    fun toRemote(local: LocalListModel): ListPlaceRemote {
-        return ListPlaceRemote(
+    fun toRemote(local: LocalListModel): ListPlaceModel {
+        return ListPlaceModel(
             local.name,
             local.location,
             local.description,
@@ -15,7 +17,8 @@ object Mapper {
             local.image
         )
     }
-    fun toLocal(local: ListPlaceRemote): LocalListModel {
+
+    fun toLocal(local: ListPlaceModel): LocalListModel {
         return local.let {
             return@let LocalListModel(
                 null,
@@ -28,8 +31,8 @@ object Mapper {
         }
     }
 
-    fun toLocalList(remote: MutableList<ListPlaceRemote>): List<LocalListModel> {
-        return remote.map {
+    fun toLocalList(model: MutableList<ListPlaceModel>): List<LocalListModel> {
+        return model.map {
             return@map LocalListModel(
                 null,
                 it.name,
@@ -40,9 +43,10 @@ object Mapper {
             )
         }
     }
-    fun toRemoteList(local: MutableList<LocalListModel>): List<ListPlaceRemote> {
+
+    fun toRemoteList(local: MutableList<LocalListModel>): List<ListPlaceModel> {
         return local.map {
-            return@map ListPlaceRemote(
+            return@map ListPlaceModel(
                 it.name,
                 it.location,
                 it.description,
@@ -52,7 +56,7 @@ object Mapper {
         }
     }
 
-    fun toLocalGrid(remote: MutableList<GridModel>): List<LocalGridModel> {
+    fun toLocalGrid(remote: MutableList<GridGalleryModel>): List<LocalGridModel> {
         return remote.map {
             return@map LocalGridModel(
                 null,
@@ -62,13 +66,27 @@ object Mapper {
             )
         }
     }
-    fun toRemoteGrid(local: MutableList<LocalGridModel>): List<GridModel> {
+
+    fun toRemoteGrid(local: MutableList<LocalGridModel>): List<GridGalleryModel> {
         return local.map {
-            return@map GridModel(
+            return@map GridGalleryModel(
                 it.caption,
                 it.image,
                 it.thumbnail
             )
+        }
+    }
+
+    fun toPagingNewsRemote(local: List<LocalNewsModel>): List<PagingNewsModel> {
+        return local.map { return@map PagingNewsModel(it.title, it.image) }
+    }
+
+    fun toPagingNewsLocal(local: List<PagingNewsModel>): List<LocalNewsModel> {
+        return local.map { return@map LocalNewsModel(
+            null,
+            it.title,
+            it.image
+        )
         }
     }
 }

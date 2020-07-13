@@ -6,16 +6,17 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
-import com.acemirr.cleanarchitecture.data.model.News
+import com.acemirr.cleanarchitecture.data.model.PagingNewsModel
 import com.acemirr.cleanarchitecture.domain.usecase.PagingUseCase
 import com.acemirr.cleanarchitecture.external.LoadingState
 import com.acemirr.cleanarchitecture.presenter.menu.paging.datasource.PagingDataSource
 import com.acemirr.cleanarchitecture.presenter.menu.paging.datasource.PagingDataSourceFactory
+import javax.inject.Inject
 
-class PagingViewModel(val useCase: PagingUseCase) : ViewModel() {
+class PagingViewModel @Inject constructor(val useCase: PagingUseCase) : ViewModel() {
 
     var pagingDataSourceFactory :PagingDataSourceFactory ?=null
-    var pagingList: LiveData<PagedList<News>>? =null
+    var pagingList: LiveData<PagedList<PagingNewsModel>>? =null
 
     fun setPaging(ctx:Context){
         val config = PagedList.Config.Builder()

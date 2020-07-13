@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             app:setRefresh="@{vm.isLoading}">
 
-            <com.acemirr.cleanarchitecture.external.GridRecyclerView
+            <com.acemirr.cleanarchitecture.external.widget.GridRecyclerView
                 android:id="@+id/rvGrid"
                 android:layoutAnimation="@anim/grid_rv_layoutanimation"
                 android:layout_width="match_parent"

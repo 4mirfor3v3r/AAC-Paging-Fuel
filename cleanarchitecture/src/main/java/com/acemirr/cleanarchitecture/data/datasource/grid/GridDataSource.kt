@@ -1,16 +1,16 @@
 package com.acemirr.cleanarchitecture.data.datasource.grid
 
 import android.content.Context
-import com.acemirr.cleanarchitecture.data.model.GridModel
+import com.acemirr.cleanarchitecture.data.model.GridGalleryModel
 import com.acemirr.cleanarchitecture.data.utils.ResState
-import com.acemirr.cleanarchitecture.domain.model.LocalGridModel
+import com.acemirr.cleanarchitecture.data.source.local.entity.LocalGridModel
 
 interface GridDataSource {
     interface Remote {
-        fun getMovies(context: Context): ResState<List<GridModel>>
+        fun getGridGallery(context: Context): ResState<List<GridGalleryModel>>
     }
 
     interface Local : Remote {
-        fun saveMovies(movies: List<LocalGridModel>)
+        fun saveGridGallery(list: List<LocalGridModel>)
     }
 }

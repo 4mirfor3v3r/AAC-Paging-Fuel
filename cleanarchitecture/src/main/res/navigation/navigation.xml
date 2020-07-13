@@ -24,7 +24,7 @@
         tools:layout="@layout/detail_fragment">
         <argument
             android:name="data_list_detail"
-            app:argType="com.acemirr.cleanarchitecture.data.model.ListPlaceRemote"
+            app:argType="com.acemirr.cleanarchitecture.data.model.ListPlaceModel"
             app:nullable="true" />
     </fragment>
     <fragment
@@ -52,7 +52,7 @@
         tools:layout="@layout/detail_grid_fragment">
         <argument
             android:name="data_grid"
-            app:argType="com.acemirr.cleanarchitecture.data.model.GridModel" />
+            app:argType="com.acemirr.cleanarchitecture.data.model.GridGalleryModel" />
         <argument
             android:name="position"
             app:argType="integer" />

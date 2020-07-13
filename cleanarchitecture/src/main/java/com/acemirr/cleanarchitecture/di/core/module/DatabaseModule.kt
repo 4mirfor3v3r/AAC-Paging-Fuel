@@ -3,7 +3,9 @@ package com.acemirr.cleanarchitecture.di.core.module
 import android.content.Context
 import androidx.room.Room
 import com.acemirr.cleanarchitecture.data.source.local.AppDatabase
+import com.acemirr.cleanarchitecture.data.source.local.dao.GridDao
 import com.acemirr.cleanarchitecture.data.source.local.dao.ListDao
+import com.acemirr.cleanarchitecture.data.source.local.dao.PagingDao
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -21,6 +23,16 @@ class DatabaseModule {
 
     @Provides
     fun provideListDao(database: AppDatabase): ListDao {
-        return database.dao
+        return database.listDao
+    }
+
+    @Provides
+    fun provideGridDao(database: AppDatabase): GridDao {
+        return database.gridDao
+    }
+
+    @Provides
+    fun providePagingDao(database: AppDatabase): PagingDao {
+        return database.pagingDao
     }
 }

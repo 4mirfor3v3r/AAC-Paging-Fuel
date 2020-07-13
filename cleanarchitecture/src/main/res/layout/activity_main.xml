@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:background="?android:colorBackground"
             android:layout_gravity="bottom"
-            app:layout_behavior=".external.BottomNavViewBehavior"
+            app:layout_behavior=".external.widget.BottomNavViewBehavior"
             app:labelVisibilityMode="labeled"
             app:menu="@menu/main_menu"/>
 

@@ -5,7 +5,7 @@ import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.acemirr.cleanarchitecture.R
-import com.acemirr.cleanarchitecture.data.model.ListPlaceRemote
+import com.acemirr.cleanarchitecture.data.model.ListPlaceModel
 import com.acemirr.cleanarchitecture.databinding.DetailFragmentBinding
 import com.acemirr.cleanarchitecture.presenter.activities.MainActivity
 import com.acemirr.cleanarchitecture.presenter.base.BaseFragment
@@ -15,7 +15,7 @@ import javax.inject.Inject
 class DetailListFragment : BaseFragment<DetailListViewModel,DetailFragmentBinding>(R.layout.detail_fragment) {
 
     private val args: DetailListFragmentArgs? by navArgs()
-    private var listModel: ListPlaceRemote? = null
+    private var listModel: ListPlaceModel? = null
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
