@@ -31,10 +31,10 @@ class PagingViewModel @Inject constructor(val useCase: PagingUseCase) : ViewMode
     }
 
     fun getLoadingState(): LiveData<LoadingState>? {
-        if (pagingDataSourceFactory != null)
-            return Transformations.switchMap(pagingDataSourceFactory!!.pagingDataSourceLiveData, PagingDataSource::state)
+        return if (pagingDataSourceFactory != null)
+            Transformations.switchMap(pagingDataSourceFactory!!.pagingDataSourceLiveData, PagingDataSource::state)
         else
-            return null
+            null
     }
 
 }

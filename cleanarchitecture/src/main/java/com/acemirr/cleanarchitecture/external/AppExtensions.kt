@@ -19,7 +19,7 @@ fun Context.showToast(message: String){
 }
 
 //    STILL IN DEVELOPMENT
-fun <T> genericRvDiffUtil(paramKey: Int) = object : DiffUtil.ItemCallback<T>() {
+fun <T> Class<T>.genericRvDiffUtil(paramKey: Int) = object : DiffUtil.ItemCallback<T>() {
     override fun areItemsTheSame(oldItem: T, newItem: T): Boolean {
         return oldItem == newItem
     }
@@ -34,5 +34,27 @@ fun <T> genericRvDiffUtil(paramKey: Int) = object : DiffUtil.ItemCallback<T>() {
             e.printStackTrace()
             false
         }
+    }
+}
+
+fun < T:Class<*>> genericDiffUtil(paramKey: Int) = object :DiffUtil.ItemCallback<T>(){
+//    override fun areContentsTheSame(oldItem: Class<Any>, newItem: Class<Any>): Boolean {
+//        return this@genericDiffUtil.fields[paramKey] == newItem.fields[paramKey]
+//    }
+
+//    override fun areItemsTheSame(oldItem: Class<T>, newItem: Class<T>): Boolean {
+//        return oldItem == newItem
+//    }
+//
+//    override fun areContentsTheSame(oldItem: Class<T>, newItem: Class<T>): Boolean {
+//        return oldItem.fields[paramKey] == newItem.fields[paramKey]
+//    }
+
+    override fun areItemsTheSame(oldItem: T, newItem: T): Boolean {
+        return oldItem == newItem
+    }
+
+    override fun areContentsTheSame(oldItem: T, newItem: T): Boolean {
+        return oldItem.fields[paramKey] == newItem.fields[paramKey]
     }
 }
